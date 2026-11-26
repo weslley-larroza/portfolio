@@ -3,654 +3,379 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weslley Larroza — Desenvolvedor</title>
+<title>Weslley Larroza, desenvolvedor full stack e automação</title>
+<meta name="description" content="Weslley Larroza, desenvolvedor full stack em Itajaí, SC. APIs, automações e integrações com C#/.NET, Python, JavaScript e Flutter para operações e logística.">
+<meta name="author" content="Weslley Larroza">
+<link rel="canonical" href="https://weslleylarroza.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://weslleylarroza.com.br/">
+<meta property="og:title" content="Weslley Larroza, desenvolvedor full stack e automação">
+<meta property="og:description" content="APIs, automações e integrações que tiram trabalho manual das operações.">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#0F2A44">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230F2A44'/%3E%3Crect y='0' width='32' height='7' fill='%23F2C12E'/%3E%3Ctext x='16' y='26' font-family='Arial' font-weight='900' font-size='15' fill='white' text-anchor='middle'%3EWL%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #12151A;
-    --bg-elev: #1A1E25;
-    --bg-elev-2: #20242C;
-    --border: #2C313A;
-    --text: #E7E9EC;
-    --text-soft: #9AA1AC;
-    --text-mute: #6B7280;
-    --accent: #E8A33D;
-    --accent-soft: #F0BC6E;
-    --blue: #5BA3D0;
-    --radius: 10px;
+    --concreto:#E4E8EC;
+    --concreto-2:#D5DBE1;
+    --naval:#0F2A44;
+    --aco:#56677A;
+    --etiqueta:#FFFFFF;
+    --doca:#F2C12E;
+    --porto:#1D5FAF;
+    --linha:#BCC5CE;
+    --wrap:1080px;
   }
-
   *{ margin:0; padding:0; box-sizing:border-box; }
-
-  html{ scroll-behavior: smooth; }
-
+  html{ scroll-behavior:smooth; }
   body{
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.5;
+    background:var(--concreto);
+    color:var(--naval);
+    font-family:'Archivo', system-ui, sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
   }
+  a{ color:var(--porto); text-underline-offset:3px; text-decoration-thickness:1px; }
+  a:hover{ text-decoration-thickness:2px; }
+  :focus-visible{ outline:3px solid var(--doca); outline-offset:3px; border-radius:2px; }
+  .wrap{ max-width:var(--wrap); margin:0 auto; padding:0 28px; }
+  .skip{ position:absolute; left:-999px; top:8px; background:var(--naval); color:#fff; padding:8px 14px; z-index:50; }
+  .skip:focus{ left:8px; }
 
-  .wrap{
-    max-width: 940px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
+  /* nav */
+  .top{ border-bottom:1px solid var(--linha); }
+  .top .wrap{ display:flex; align-items:center; justify-content:space-between; height:64px; gap:24px; }
+  .brand{ font-weight:800; font-stretch:115%; font-size:17px; color:var(--naval); text-decoration:none; letter-spacing:-.01em; }
+  .top nav{ display:flex; gap:26px; font-size:15px; }
+  .top nav a{ color:var(--aco); text-decoration:none; }
+  .top nav a:hover{ color:var(--naval); }
+  .top nav a.cv{ color:var(--naval); font-weight:600; border-bottom:2px solid var(--doca); }
 
-  code, .mono{ font-family: 'JetBrains Mono', monospace; }
-
-  /* ===== NAV ===== */
-  nav{
-    position: sticky;
-    top: 0;
-    background: rgba(18,21,26,0.9);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
-    z-index: 10;
+  /* hero */
+  .hero{ padding:80px 0 96px; }
+  .hero .wrap{ display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
+  .hero h1{
+    font-size:clamp(46px, 7.4vw, 92px);
+    font-weight:900;
+    font-stretch:125%;
+    line-height:.92;
+    letter-spacing:-.035em;
   }
-  nav .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding: 16px 24px;
-  }
-  .nav-brand{
-    font-family:'JetBrains Mono', monospace;
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--text);
-  }
-  .nav-brand span{ color: var(--accent); }
-  .nav-links{
-    display:flex;
-    gap: 28px;
-    font-size: 14px;
-  }
-  .nav-links a{
-    color: var(--text-soft);
-    text-decoration:none;
-    transition: color 0.15s ease;
-  }
-  .nav-links a:hover{ color: var(--text); }
-
-  /* ===== HERO ===== */
-  .hero{
-    padding: 88px 0 64px;
-  }
-  .hero-kicker{
-    font-family:'JetBrains Mono', monospace;
-    font-size: 13px;
-    color: var(--accent);
-    margin-bottom: 18px;
-    display:flex;
-    align-items:center;
-    gap: 8px;
-  }
-  .hero-kicker .pulse{
-    width:7px; height:7px; border-radius:50%;
-    background: var(--accent);
-    box-shadow: 0 0 0 3px rgba(232,163,61,0.18);
-  }
-  h1{
-    font-size: clamp(34px, 5.4vw, 52px);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1.12;
-    max-width: 700px;
-  }
-  h1 .hl{ color: var(--accent); }
-  .hero-sub{
-    margin-top: 20px;
-    font-size: 17px;
-    color: var(--text-soft);
-    max-width: 600px;
-    line-height: 1.65;
-  }
-  .hero-sub strong{ color: var(--text); font-weight: 600; }
-
-  .hero-actions{
-    margin-top: 32px;
-    display:flex;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
+  .hero h1 span{ display:block; }
+  .lede{ margin-top:28px; font-size:22px; line-height:1.4; font-weight:500; max-width:30ch; }
+  .hero-sub{ margin-top:16px; color:var(--aco); max-width:52ch; }
+  .actions{ margin-top:32px; display:flex; flex-wrap:wrap; gap:12px; }
   .btn{
-    display:inline-flex;
-    align-items:center;
-    gap: 8px;
-    padding: 11px 20px;
-    border-radius: var(--radius);
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration:none;
-    transition: all 0.15s ease;
-    border: 1px solid transparent;
+    display:inline-flex; align-items:center; height:46px; padding:0 20px;
+    font-weight:650; font-size:15.5px; text-decoration:none;
+    border:2px solid var(--naval); color:var(--naval); border-radius:3px;
   }
-  .btn-primary{
-    background: var(--accent);
-    color: #1A140A;
-  }
-  .btn-primary:hover{ background: var(--accent-soft); }
-  .btn-ghost{
-    border-color: var(--border);
-    color: var(--text);
-  }
-  .btn-ghost:hover{ border-color: var(--text-mute); background: var(--bg-elev); }
+  .btn:hover{ background:var(--etiqueta); }
+  .btn.primary{ background:var(--naval); color:#fff; }
+  .btn.primary:hover{ background:#1A3D60; }
 
-  /* ===== SECTION SHARED ===== */
-  section{ padding: 56px 0; border-top: 1px solid var(--border); }
-  .section-eyebrow{
-    font-family:'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: var(--text-mute);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 8px;
+  /* shipping label */
+  .label{
+    background:var(--etiqueta);
+    border:2px solid var(--naval);
+    border-radius:4px;
+    box-shadow:6px 6px 0 var(--naval);
+    transform:rotate(1.6deg);
+    font-stretch:88%;
+    animation:stamp .55s cubic-bezier(.2,.9,.3,1.2) .15s both;
   }
-  .section-title{
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    margin-bottom: 32px;
+  @keyframes stamp{
+    from{ opacity:0; transform:rotate(-5deg) scale(1.08); box-shadow:0 0 0 var(--naval); }
+    to{ opacity:1; transform:rotate(1.6deg) scale(1); box-shadow:6px 6px 0 var(--naval); }
   }
+  .label-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    background:var(--doca); border-bottom:2px solid var(--naval);
+    padding:10px 16px; font-weight:800; font-size:15px;
+  }
+  .label-head b{ font-weight:900; font-stretch:125%; font-size:19px; letter-spacing:-.01em; }
+  .label dl{ display:grid; grid-template-columns:1fr 1fr; }
+  .label .f{ padding:10px 16px 12px; border-bottom:1px solid var(--naval); }
+  .label .f:nth-child(odd){ border-right:1px solid var(--naval); }
+  .label .f.full{ grid-column:1 / -1; border-right:none; }
+  .label dt{ font-size:12.5px; color:var(--aco); font-weight:600; }
+  .label dd{ font-size:16px; font-weight:700; line-height:1.3; margin-top:2px; }
+  .label .status dd::before{
+    content:""; display:inline-block; width:9px; height:9px; border-radius:50%;
+    background:#1F9D55; margin-right:8px; vertical-align:1px;
+  }
+  .barcode{ padding:14px 16px 12px; display:flex; align-items:flex-end; justify-content:space-between; gap:16px; }
+  .barcode svg{ width:100%; max-width:236px; height:46px; fill:var(--naval); }
+  .barcode span{ font-size:13px; font-weight:700; letter-spacing:.06em; white-space:nowrap; }
 
-  /* ===== ABOUT / QUICK FACTS ===== */
-  .about-grid{
-    display:grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 40px;
+  /* sections */
+  section{ padding:88px 0; }
+  section + section{ border-top:1px solid var(--linha); }
+  h2{
+    font-size:clamp(30px, 4vw, 42px);
+    font-weight:850; font-stretch:115%;
+    letter-spacing:-.025em; line-height:1.05;
+    margin-bottom:36px; max-width:22ch;
   }
-  .about-text p{
-    color: var(--text-soft);
-    font-size: 15.5px;
-    line-height: 1.75;
-    margin-bottom: 14px;
-  }
-  .about-text strong{ color: var(--text); font-weight: 600; }
-  .facts{
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 22px;
-  }
-  .fact-row{
-    display:flex;
-    justify-content: space-between;
-    padding: 11px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 14px;
-  }
-  .fact-row:last-child{ border-bottom:none; }
-  .fact-row .k{ color: var(--text-mute); }
-  .fact-row .v{ font-family:'JetBrains Mono', monospace; color: var(--text); font-weight: 500; }
+  .two{ display:grid; grid-template-columns:1.25fr 1fr; gap:64px; }
+  .prose p{ max-width:62ch; margin-bottom:16px; }
+  .prose p:first-child{ font-size:20px; line-height:1.5; }
+  .facts{ border-top:2px solid var(--naval); }
+  .facts div{ display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--linha); font-size:15.5px; }
+  .facts dt{ color:var(--aco); }
+  .facts dd{ font-weight:650; text-align:right; }
 
-  /* ===== STACK ===== */
-  .stack-groups{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  .stack-card{
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 20px;
-  }
-  .stack-card h3{
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--blue);
-    margin-bottom: 14px;
-    font-weight: 600;
-  }
-  .stack-tags{ display:flex; flex-wrap:wrap; gap: 8px; }
-  .tag{
-    font-family:'JetBrains Mono', monospace;
-    font-size: 12.5px;
-    background: var(--bg-elev-2);
-    border: 1px solid var(--border);
-    color: var(--text-soft);
-    padding: 5px 10px;
-    border-radius: 6px;
-  }
+  /* stack */
+  .stack{ display:grid; grid-template-columns:repeat(3,1fr); gap:36px 48px; }
+  .stack h3{ font-size:15px; font-weight:750; padding-bottom:8px; border-bottom:2px solid var(--naval); margin-bottom:10px; }
+  .stack p{ color:var(--aco); font-size:15.5px; line-height:1.7; }
+  .stack p strong{ color:var(--naval); font-weight:650; }
 
-  /* ===== PROJECTS ===== */
-  .projects-grid{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+  /* manifest */
+  .manifest{ border-top:2px solid var(--naval); }
+  .manifest-row{
+    display:grid; grid-template-columns:260px 1fr 220px; gap:32px;
+    padding:26px 0; border-bottom:1px solid var(--linha);
   }
-  .project-card{
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px;
-    display:flex;
-    flex-direction:column;
-    transition: border-color 0.15s ease, transform 0.15s ease;
-  }
-  .project-card:hover{
-    border-color: var(--text-mute);
-    transform: translateY(-2px);
-  }
-  .project-card.wide{ grid-column: 1 / -1; }
-  .project-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    margin-bottom: 12px;
-  }
-  .project-name{
-    font-size: 17px;
-    font-weight: 700;
-  }
-  .project-badge{
-    font-family:'JetBrains Mono', monospace;
-    font-size: 11px;
-    padding: 3px 9px;
-    border-radius: 20px;
-    border: 1px solid var(--border);
-    color: var(--text-mute);
-    white-space: nowrap;
-  }
-  .project-desc{
-    color: var(--text-soft);
-    font-size: 14px;
-    line-height: 1.6;
-    flex-grow: 1;
-    margin-bottom: 18px;
-  }
-  .project-foot{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  }
-  .project-langs{ display:flex; gap:8px; flex-wrap:wrap; }
-  .lang-pill{
-    display:flex; align-items:center; gap:6px;
-    font-family:'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: var(--text-mute);
-  }
-  .lang-dot{ width:8px; height:8px; border-radius:50%; }
-  .project-link{
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration:none;
-  }
-  .project-link:hover{ color: var(--accent-soft); }
+  .m-name h3{ font-size:20px; font-weight:800; font-stretch:105%; line-height:1.2; letter-spacing:-.01em; }
+  .m-status{ display:inline-block; margin-top:8px; font-size:13px; font-weight:650; padding:2px 8px; border:1px solid var(--naval); border-radius:2px; }
+  .m-desc{ color:#2B425B; max-width:60ch; }
+  .m-tech{ font-size:14.5px; color:var(--aco); }
+  .m-links{ margin-top:10px; display:flex; gap:16px; font-size:15px; font-weight:600; }
+  .more{ margin-top:40px; }
+  .more h3{ font-size:16px; font-weight:750; margin-bottom:12px; }
+  .more ul{ list-style:none; display:grid; grid-template-columns:repeat(3,1fr); gap:20px 32px; }
+  .more li a{ font-weight:650; display:block; }
+  .more li span{ font-size:15px; color:var(--aco); }
 
-  /* ===== CERTS STRIP ===== */
-  .cert-strip{
-    display:flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .cert-pill{
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 8px 16px;
-    font-size: 13px;
-    color: var(--text-soft);
-    display:flex;
-    align-items:center;
-    gap: 8px;
-  }
-  .cert-pill .n{
-    font-family:'JetBrains Mono', monospace;
-    color: var(--blue);
-    font-weight: 600;
-  }
+  /* services */
+  .services{ display:grid; grid-template-columns:repeat(2,1fr); gap:0 64px; }
+  .service{ padding:24px 0 28px; border-top:2px solid var(--naval); }
+  .service h3{ font-size:20px; font-weight:800; font-stretch:105%; letter-spacing:-.01em; margin-bottom:8px; }
+  .service p{ color:#2B425B; max-width:46ch; }
+  .service .ex{ margin-top:10px; font-size:14.5px; color:var(--aco); }
+  .intro{ max-width:60ch; color:var(--aco); margin:-16px 0 40px; font-size:18px; }
 
-  /* ===== FOOTER ===== */
-  footer{
-    padding: 48px 0 60px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .footer-name{ font-weight: 700; }
-  .footer-sub{ color: var(--text-mute); font-size: 13px; margin-top: 4px; }
-  .footer-links{ display:flex; gap: 20px; }
-  .footer-links a{
-    color: var(--text-soft);
-    text-decoration:none;
-    font-size: 14px;
-    border-bottom: 1px solid transparent;
-  }
-  .footer-links a:hover{ color: var(--text); border-color: var(--text); }
+  /* certs */
+  .certs{ display:flex; flex-wrap:wrap; gap:10px; }
+  .certs li{ list-style:none; background:var(--etiqueta); border:1px solid var(--linha); border-radius:3px; padding:8px 12px; font-size:15px; }
+  .certs li b{ font-weight:750; margin-right:6px; }
 
-  @media (max-width: 720px){
-    .about-grid{ grid-template-columns: 1fr; }
-    .stack-groups{ grid-template-columns: 1fr; }
-    .projects-grid{ grid-template-columns: 1fr; }
-    .nav-links{ display:none; }
+  /* contact */
+  .contact{ background:var(--naval); color:#fff; border-top:none; }
+  .contact h2{ color:#fff; }
+  .contact p{ max-width:56ch; font-size:19px; color:#C9D5E1; }
+  .contact .btn{ border-color:#fff; color:#fff; }
+  .contact .btn:hover{ background:#1A3D60; }
+  .contact .btn.primary{ background:var(--doca); border-color:var(--doca); color:var(--naval); }
+  .contact .btn.primary:hover{ background:#F7D162; }
+  footer{ background:var(--naval); color:#8FA3B8; font-size:14.5px; }
+  footer .wrap{ display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:22px 28px; border-top:1px solid #23415F; }
+  footer a{ color:#C9D5E1; }
+
+  @media (max-width: 900px){
+    .hero .wrap, .two{ grid-template-columns:1fr; gap:48px; }
+    .label{ max-width:460px; }
+    .stack{ grid-template-columns:1fr 1fr; }
+    .manifest-row{ grid-template-columns:1fr; gap:10px; }
+    .more ul{ grid-template-columns:1fr; }
+  }
+  @media (max-width: 620px){
+    body{ font-size:16px; }
+    .wrap{ padding:0 20px; }
+    .top nav a:not(.cv){ display:none; }
+    .hero{ padding:56px 0 72px; }
+    .lede{ font-size:19px; }
+    .stack, .services{ grid-template-columns:1fr; }
+    section{ padding:64px 0; }
+    .label{ transform:rotate(.8deg); animation:none; margin-right:6px; }
+    .label dd{ font-size:15px; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .label{ animation:none; }
   }
 </style>
 </head>
 <body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-<nav>
+<header class="top">
   <div class="wrap">
-    <div class="nav-brand">weslley<span>.</span>larroza</div>
-    <div class="nav-links">
+    <a class="brand" href="#">Weslley Larroza</a>
+    <nav aria-label="Seções">
       <a href="#sobre">Sobre</a>
-      <a href="#stack">Stack</a>
       <a href="#projetos">Projetos</a>
+      <a href="#servicos">Para empresas</a>
       <a href="#contato">Contato</a>
+      <a class="cv" href="cv/Weslley-Larroza-CV.pdf">Baixar CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1><span>Weslley</span><span>Larroza</span></h1>
+        <p class="lede">Desenvolvedor full stack. Tiro o trabalho manual que fica entre sistemas, planilhas e pessoas.</p>
+        <p class="hero-sub">Construo APIs, automações e integrações com C#/.NET, Python, JavaScript e Flutter. Vim da infraestrutura de TI e hoje trabalho dentro da logística de exportação, então entendo o problema antes de escrever o código.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projetos">Ver projetos</a>
+          <a class="btn" href="cv/Weslley-Larroza-CV.pdf">Baixar CV</a>
+          <a class="btn" href="https://www.linkedin.com/in/weslley-larroza-b8bb57213">LinkedIn</a>
+        </div>
+      </div>
+
+      <aside class="label" aria-label="Resumo do perfil">
+        <div class="label-head"><b>Gate pass</b><span>Porto de Itajaí, SC</span></div>
+        <dl>
+          <div class="f"><dt>Remetente</dt><dd>Infraestrutura de TI</dd></div>
+          <div class="f"><dt>Destino</dt><dd>Seu time ou sua operação</dd></div>
+          <div class="f full"><dt>Conteúdo</dt><dd>APIs, automações, integrações e apps mobile</dd></div>
+          <div class="f"><dt>Formação</dt><dd>ADS, Uniasselvi</dd></div>
+          <div class="f"><dt>Cursos</dt><dd>Trilhas AI&#8209;102 e AI&#8209;900, 390+ certificados</dd></div>
+          <div class="f full status"><dt>Status</dt><dd>Disponível para vagas e projetos</dd></div>
+        </dl>
+        <div class="barcode">
+          <svg viewBox="0 0 236 46" preserveAspectRatio="none" aria-hidden="true"><rect x="0" y="0" width="2" height="46"/><rect x="5" y="0" width="2" height="46"/><rect x="11" y="0" width="4" height="46"/><rect x="17" y="0" width="6" height="46"/><rect x="27" y="0" width="2" height="46"/><rect x="33" y="0" width="4" height="46"/><rect x="38" y="0" width="2" height="46"/><rect x="41" y="0" width="2" height="46"/><rect x="44" y="0" width="2" height="46"/><rect x="48" y="0" width="4" height="46"/><rect x="54" y="0" width="4" height="46"/><rect x="60" y="0" width="6" height="46"/><rect x="67" y="0" width="3" height="46"/><rect x="73" y="0" width="2" height="46"/><rect x="77" y="0" width="3" height="46"/><rect x="83" y="0" width="2" height="46"/><rect x="88" y="0" width="6" height="46"/><rect x="98" y="0" width="4" height="46"/><rect x="103" y="0" width="3" height="46"/><rect x="108" y="0" width="2" height="46"/><rect x="114" y="0" width="3" height="46"/><rect x="119" y="0" width="2" height="46"/><rect x="122" y="0" width="4" height="46"/><rect x="128" y="0" width="2" height="46"/><rect x="134" y="0" width="2" height="46"/><rect x="139" y="0" width="3" height="46"/><rect x="144" y="0" width="3" height="46"/><rect x="149" y="0" width="2" height="46"/><rect x="153" y="0" width="2" height="46"/><rect x="159" y="0" width="2" height="46"/><rect x="165" y="0" width="6" height="46"/><rect x="173" y="0" width="2" height="46"/><rect x="177" y="0" width="2" height="46"/><rect x="181" y="0" width="4" height="46"/><rect x="187" y="0" width="2" height="46"/><rect x="193" y="0" width="6" height="46"/><rect x="203" y="0" width="6" height="46"/><rect x="213" y="0" width="2" height="46"/><rect x="219" y="0" width="2" height="46"/><rect x="222" y="0" width="3" height="46"/><rect x="226" y="0" width="6" height="46"/><rect x="234" y="0" width="2" height="46"/></svg>
+          <span>WL 2026 ITJ</span>
+        </div>
+      </aside>
     </div>
   </div>
-</nav>
-
-<div class="wrap">
-
-  <section class="hero">
-    <div class="hero-kicker"><span class="pulse"></span>Aberto a projetos, consultoria e trocas técnicas</div>
-    <h1>Desenvolvedor focado em <span class="hl">automação, backend e integração de dados</span>.</h1>
-    <p class="hero-sub">
-      Atuo em <strong>desenvolvimento e automação de sistemas internos</strong>, com base sólida em
-      <strong>Infraestrutura de TI</strong>. Construo desde automações backend em <strong>Python</strong>
-      até aplicativos mobile em <strong>Flutter</strong>. Formado em <strong>Análise e Desenvolvimento
-      de Sistemas</strong>.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="https://github.com/weslley-larroza" target="_blank" rel="noopener">Ver GitHub</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/weslley-larroza-b8bb57213" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </section>
 
   <section id="sobre">
-    <div class="section-eyebrow">01 — Perfil</div>
-    <div class="section-title">Sobre</div>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>
-          Comecei resolvendo problemas do dia a dia em <strong>infraestrutura de TI</strong> — servidores,
-          redes, suporte — e isso me deu uma base prática que poucos desenvolvedores têm: entendo o que
-          acontece por trás de um sistema, não só a camada de código.
-        </p>
-        <p>
-          Essa base foi o ponto de partida para migrar para <strong>desenvolvimento</strong>. Hoje construo
-          automações em Python, aplicativos mobile em Flutter e trabalho com integração e persistência de
-          dados (SQL Server, SQLite, PostgreSQL). Meu objetivo é atuar como <strong>Desenvolvedor Full Stack
-          ou em Automação/Backend</strong>.
-        </p>
-        <p>
-          Atualmente desenvolvo um sistema web interno de gestão de fluxos operacionais integrado a um
-          sistema governamental, incluindo controle de status, histórico de ações auditável e automação em
-          Python que corrige e reenvia registros automaticamente via triggers no banco de dados.
-        </p>
-      </div>
-      <div class="facts">
-        <div class="fact-row"><span class="k">Formação</span><span class="v">ADS · UNIASSELVI (concluído)</span></div>
-        <div class="fact-row"><span class="k">Atuação atual</span><span class="v">Dev & Automação</span></div>
-        <div class="fact-row"><span class="k">Repositórios</span><span class="v">31</span></div>
-        <div class="fact-row"><span class="k">Certificações</span><span class="v">27+</span></div>
-        <div class="fact-row"><span class="k">Localização</span><span class="v">Itajaí, SC</span></div>
+    <div class="wrap">
+      <h2>Comecei resolvendo problemas na infraestrutura</h2>
+      <div class="two">
+        <div class="prose">
+          <p>Fui o único técnico de TI de uma filial: servidores, redes, Active Directory, backups e suporte. Isso me deu uma base que muitos desenvolvedores não têm. Sei o que acontece por trás do sistema, não só na camada de código.</p>
+          <p>Daí passei para o desenvolvimento. Numa distribuidora, construí uma plataforma web interna para as filiais (API REST em C# com front-end em JavaScript), robôs de RPA fiscal, monitoramento com alertas automáticos e um app Flutter offline-first para fotos de pedidos.</p>
+          <p>Hoje trabalho na logística de exportação de uma indústria frigorífica. Vivo de perto o gate, os pedidos e as planilhas, e desenvolvo ferramentas para cruzar esses dados sem conferência manual.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Cidade</dt><dd>Itajaí, SC</dd></div>
+          <div><dt>Foco</dt><dd>Full stack e automação</dd></div>
+          <div><dt>Formação</dt><dd>Tecnólogo em ADS, Uniasselvi</dd></div>
+          <div><dt>Trilhas Azure AI</dt><dd>AI-102, AI-900 (DIO)</dd></div>
+          <div><dt>Plataforma corporativa</dt><dd>TOTVS Fluig</dd></div>
+          <div><dt>Inglês</dt><dd>Leitura técnica</dd></div>
+        </dl>
       </div>
     </div>
   </section>
 
   <section id="stack">
-    <div class="section-eyebrow">02 — Habilidades</div>
-    <div class="section-title">Stack técnica</div>
-    <div class="stack-groups">
-      <div class="stack-card">
-        <h3>Linguagens</h3>
-        <div class="stack-tags">
-          <span class="tag">Python</span>
-          <span class="tag">Dart</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">SQL</span>
-        </div>
-      </div>
-      <div class="stack-card">
-        <h3>Frameworks & Libs</h3>
-        <div class="stack-tags">
-          <span class="tag">Flutter</span>
-          <span class="tag">Selenium</span>
-          <span class="tag">BeautifulSoup</span>
-          <span class="tag">customtkinter</span>
-          <span class="tag">ttkbootstrap</span>
-        </div>
-      </div>
-      <div class="stack-card">
-        <h3>Dados</h3>
-        <div class="stack-tags">
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">SQL Server</span>
-          <span class="tag">SQLite</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">Supabase</span>
-        </div>
-      </div>
-      <div class="stack-card">
-        <h3>Infra & Ferramentas</h3>
-        <div class="stack-tags">
-          <span class="tag">Linux (Ubuntu)</span>
-          <span class="tag">Git / GitHub</span>
-          <span class="tag">RDP / Redes</span>
-          <span class="tag">VS Code</span>
-          <span class="tag">PyCharm</span>
-        </div>
-      </div>
-      <div class="stack-card">
-        <h3>Cloud & IA</h3>
-        <div class="stack-tags">
-          <span class="tag">Azure AI</span>
-          <span class="tag">OpenAI (Azure)</span>
-          <span class="tag">AI-900 / AI-102</span>
-        </div>
-      </div>
-      <div class="stack-card">
-        <h3>Metodologia</h3>
-        <div class="stack-tags">
-          <span class="tag">Scrum</span>
-          <span class="tag">Git Flow</span>
-        </div>
+    <div class="wrap">
+      <h2>Com o que eu trabalho</h2>
+      <div class="stack">
+        <div><h3>Backend e APIs</h3><p><strong>C#/.NET</strong> (API REST), <strong>Python</strong> com FastAPI e Flask, Java (fundamentos)</p></div>
+        <div><h3>Automação e RPA</h3><p><strong>Playwright</strong>, Selenium, PyAutoGUI, OpenCV, BeautifulSoup, <strong>N8N</strong></p></div>
+        <div><h3>Front-end e mobile</h3><p><strong>JavaScript</strong>, TypeScript, HTML/CSS, <strong>Flutter</strong>/Dart com SQLite e Hive</p></div>
+        <div><h3>Dados</h3><p><strong>SQL Server</strong>, PostgreSQL, <strong>Supabase</strong> (RLS), SQLite, MySQL, MongoDB (fundamentos)</p></div>
+        <div><h3>Infra e entrega</h3><p>Linux, <strong>Git e GitHub Actions</strong>, Docker e AWS (fundamentos), redes, AD, RDP</p></div>
+        <div><h3>Plataformas e IA</h3><p><strong>TOTVS Fluig</strong>, Azure AI, Azure OpenAI, Scrum, Figma</p></div>
       </div>
     </div>
   </section>
 
   <section id="projetos">
-    <div class="section-eyebrow">03 — Portfólio</div>
-    <div class="section-title">Projetos em destaque</div>
-    <div class="projects-grid">
-
-      <div class="project-card wide">
-        <div class="project-top">
-          <div class="project-name">Automação de Rastreamento Logístico</div>
-          <div class="project-badge">Em produção</div>
-        </div>
-        <div class="project-desc">
-          Sistema de automação em Python para rastreamento de operações logísticas internacionais.
-          Orquestra múltiplos scripts de web scraping resiliente (contornando proteções anti-bot avançadas)
-          integrados a um banco Supabase/PostgreSQL, com orquestração desktop, monitoramento de erros em
-          tempo real e logging centralizado.
-        </div>
-        <div class="project-foot">
-          <div class="project-langs">
-            <span class="lang-pill"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
-            <span class="lang-pill"><span class="lang-dot" style="background:#336791"></span>PostgreSQL</span>
-            <span class="lang-pill"><span class="lang-dot" style="background:#43853d"></span>Selenium</span>
-          </div>
-          <span class="mono" style="font-size:12px; color: var(--text-mute);">Projeto atual</span>
-        </div>
+    <div class="wrap">
+      <h2>Projetos que estão rodando</h2>
+      <div class="manifest">
+      <article class="manifest-row">
+        <div class="m-name"><h3>Conciliação gate x pedidos</h3><span class="m-status">Em desenvolvimento</span></div>
+        <p class="m-desc">Cruza os registros de portaria com os pedidos do sistema de armazém e mantém sincronizadas as planilhas da equipe de expedição. Acaba com a conferência manual entre sistema e Excel e aponta divergências antes da carga sair.</p>
+        <div class="m-meta"><p class="m-tech">Python, Excel, JavaScript</p></div>
+      </article>
+      <article class="manifest-row">
+        <div class="m-name"><h3>Rastreamento logístico internacional</h3><span class="m-status">Em produção</span></div>
+        <p class="m-desc">Orquestra vários robôs de coleta em portais com proteção anti-bot e grava tudo num banco Supabase/PostgreSQL, com monitoramento de erros em tempo real e log centralizado.</p>
+        <div class="m-meta"><p class="m-tech">Python, Selenium, PostgreSQL</p></div>
+      </article>
+      <article class="manifest-row">
+        <div class="m-name"><h3>RPA fiscal</h3><span class="m-status">Em produção</span></div>
+        <p class="m-desc">Robô que valida e transmite documentos fiscais em sistemas do governo. Confere o estado da tela por visão computacional para evitar falso positivo, reinicia o processo limpo quando falha e avisa a equipe automaticamente.</p>
+        <div class="m-meta"><p class="m-tech">Python, Playwright, OpenCV, Supabase</p></div>
+      </article>
+      <article class="manifest-row">
+        <div class="m-name"><h3>Rastreamento rodoviário de notas</h3><span class="m-status">Automação de dados</span></div>
+        <p class="m-desc">Consulta a entrega de notas fiscais em portais de várias transportadoras, cada uma com seu fluxo e captcha, e grava data e previsão direto no Google Sheets. O que não encontra vai para uma fila de verificação manual.</p>
+        <div class="m-meta"><p class="m-tech">Python, Selenium, Google Sheets API</p></div>
+      </article>
+      <article class="manifest-row">
+        <div class="m-name"><h3>LogiPlan Pro</h3><span class="m-status">Demo ao vivo</span></div>
+        <p class="m-desc">Simula o carregamento e a cubagem de cargas em carreta, vanderleia, truck e rodotrem, com visualização 3D. Calcula pilhas, peso e posição dos blocos e avisa excesso de peso.</p>
+        <div class="m-meta"><p class="m-tech">JavaScript, Plotly.js, Bootstrap</p><p class="m-links"><a href="https://weslley-larroza.github.io/-Logiplan-demo/">Abrir demo</a><a href="https://github.com/weslley-larroza/-Logiplan-demo">Código</a></p></div>
+      </article>
       </div>
-
-      <div class="project-card wide">
-        <div class="project-top">
-          <div class="project-name">Automação Fiscal (RPA Desktop)</div>
-          <div class="project-badge">Em produção</div>
-        </div>
-        <div class="project-desc">
-          Robô de RPA em Python responsável por validar e transmitir documentos fiscais em sistemas
-          governamentais, com validação visual de tela (evitando falsos positivos por leitura incorreta de
-          estado), mecanismo de retry com reinício limpo de processos, e monitoramento em tempo real via
-          notificações automáticas. Inclui também um serviço complementar que consulta retorno de
-          protocolos via automação de navegador e integra os resultados a um banco de dados centralizado.
-        </div>
-        <div class="project-foot">
-          <div class="project-langs">
-            <span class="lang-pill"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
-            <span class="lang-pill"><span class="lang-dot" style="background:#43853d"></span>Playwright</span>
-            <span class="lang-pill"><span class="lang-dot" style="background:#336791"></span>Supabase</span>
-          </div>
-          <span class="mono" style="font-size:12px; color: var(--text-mute);">Projeto atual</span>
-        </div>
+      <div class="more">
+        <h3>Outros repositórios</h3>
+        <ul>
+        <li><a href="https://github.com/weslley-larroza/App-android-update-fotos">App de fotos de pedidos</a><span>Flutter. Captura, redimensiona e envia fotos vinculadas ao número do pedido, funcionando offline.</span></li>
+        <li><a href="https://github.com/weslley-larroza/Etiqueta-NF-Printer">Etiqueta NF Printer</a><span>Python. Impressão de etiquetas de notas fiscais com escolha de impressora.</span></li>
+        <li><a href="https://github.com/weslley-larroza/CONEXAO-REMOTA">Conexão Remota</a><span>Python. Organiza acessos RDP a vários servidores a partir de um JSON.</span></li>
+        </ul>
       </div>
-
-      <div class="project-card wide">
-        <div class="project-top">
-          <div class="project-name">Automação de Rastreamento Rodoviário</div>
-          <div class="project-badge">Python · Selenium</div>
-        </div>
-        <div class="project-desc">
-          Script em Python que consulta automaticamente o status de entrega de notas fiscais em múltiplos
-          portais de transportadoras rodoviárias, cada uma com estrutura de página e fluxo de captcha
-          diferentes (incluindo resolução automática de captcha numérico). Os resultados de data de entrega
-          e previsão são gravados diretamente numa planilha via API do Google Sheets, com fila separada para
-          notas que exigem verificação manual quando a automação não encontra a informação.
-        </div>
-        <div class="project-foot">
-          <div class="project-langs">
-            <span class="lang-pill"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
-            <span class="lang-pill"><span class="lang-dot" style="background:#43853d"></span>Selenium</span>
-            <span class="lang-pill"><span class="lang-dot" style="background:#0F9D58"></span>Google Sheets API</span>
-          </div>
-          <span class="mono" style="font-size:12px; color: var(--text-mute);">Automação de dados</span>
-        </div>
-      </div>
-
-      <div class="project-card wide">
-        <div class="project-top">
-          <div class="project-name">LogiPlan Pro — Otimização 3D de Carga</div>
-          <div class="project-badge">Demo ao vivo</div>
-        </div>
-        <div class="project-desc">
-          Ferramenta web para simular o carregamento e cubagem de cargas em diferentes veículos (carreta,
-          Vanderleia, truck, rodo-trem) ou espaços de armazenagem personalizados, com visualização 3D
-          interativa. O algoritmo de empacotamento calcula automaticamente número de pilhas, peso total e
-          posicionamento dos blocos numa grade 2D testando as duas orientações possíveis, com distribuição
-          sequencial entre semirreboques no modo rodo-trem e alertas visuais de excesso de peso.
-        </div>
-        <div class="project-foot">
-          <div class="project-langs">
-            <span class="lang-pill"><span class="lang-dot" style="background:#F0DB4F"></span>JavaScript</span>
-            <span class="lang-pill"><span class="lang-dot" style="background:#7C3AED"></span>Plotly.js (3D)</span>
-            <span class="lang-pill"><span class="lang-dot" style="background:#7952B3"></span>Bootstrap 5</span>
-          </div>
-          <div style="display:flex; gap:16px;">
-            <a class="project-link" href="https://weslley-larroza.github.io/-Logiplan-demo/" target="_blank" rel="noopener">Ver demo →</a>
-            <a class="project-link" href="https://github.com/weslley-larroza/-Logiplan-demo" target="_blank" rel="noopener">Ver código →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-top">
-          <div class="project-name">CONEXAO-REMOTA</div>
-          <div class="project-badge">Público</div>
-        </div>
-        <div class="project-desc">
-          Ferramenta em Python para gerenciar e organizar acessos a múltiplos servidores, com configuração
-          centralizada via JSON.
-        </div>
-        <div class="project-foot">
-          <div class="project-langs">
-            <span class="lang-pill"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
-          </div>
-          <a class="project-link" href="https://github.com/weslley-larroza/CONEXAO-REMOTA" target="_blank" rel="noopener">Ver código →</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-top">
-          <div class="project-name">Etiqueta-NF-Printer</div>
-          <div class="project-badge">Público</div>
-        </div>
-        <div class="project-desc">
-          Aplicação desktop com ttkbootstrap para gerenciar impressão de etiquetas de Notas Fiscais, com
-          seleção de impressoras.
-        </div>
-        <div class="project-foot">
-          <div class="project-langs">
-            <span class="lang-pill"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
-          </div>
-          <a class="project-link" href="https://github.com/weslley-larroza/Etiqueta-NF-Printer" target="_blank" rel="noopener">Ver código →</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-top">
-          <div class="project-name">App-android-update-fotos</div>
-          <div class="project-badge">Público</div>
-        </div>
-        <div class="project-desc">
-          App Flutter para capturar/selecionar imagens e enviá-las a um servidor, com número de pedido,
-          pré-visualização e upload com redimensionamento.
-        </div>
-        <div class="project-foot">
-          <div class="project-langs">
-            <span class="lang-pill"><span class="lang-dot" style="background:#00B4AB"></span>Dart</span>
-          </div>
-          <a class="project-link" href="https://github.com/weslley-larroza/App-android-update-fotos" target="_blank" rel="noopener">Ver código →</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-top">
-          <div class="project-name">Web_Login</div>
-          <div class="project-badge">Público</div>
-        </div>
-        <div class="project-desc">
-          Estudo de front-end: tela de login com fluxo de autenticação.
-        </div>
-        <div class="project-foot">
-          <div class="project-langs">
-            <span class="lang-pill"><span class="lang-dot" style="background:#E44D26"></span>HTML/CSS/JS</span>
-          </div>
-          <a class="project-link" href="https://github.com/weslley-larroza/Web_Login" target="_blank" rel="noopener">Ver código →</a>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <section>
-    <div class="section-eyebrow">04 — Formação contínua</div>
-    <div class="section-title">Certificações recentes</div>
-    <div class="cert-strip">
-      <span class="cert-pill"><span class="n">30h</span>AI-102 Certification</span>
-      <span class="cert-pill"><span class="n">26h</span>Python Fundamentals</span>
-      <span class="cert-pill"><span class="n">15h</span>Azure AI Fundamentals (AI-900)</span>
-      <span class="cert-pill"><span class="n">41h</span>Lógica de Programação</span>
-      <span class="cert-pill"><span class="n">11h</span>Consumindo APIs com Flutter</span>
-      <span class="cert-pill"><span class="n">10h</span>GitHub Certification</span>
-      <span class="cert-pill"><span class="n">10h</span>Fundamentos de IA</span>
-      <span class="cert-pill"><span class="n">40h</span>Fluig Avançado</span>
+  <section id="servicos">
+    <div class="wrap">
+      <h2>O que posso resolver na sua operação</h2>
+      <p class="intro">Também atendo empresas por projeto. Começo entendendo o processo e entrego uma melhoria pequena e mensurável antes de qualquer coisa grande.</p>
+      <div class="services">
+        <div class="service"><h3>Tarefas manuais repetitivas</h3><p>Robôs e scripts que copiam dados entre sistemas, preenchem portais e conferem documentos no lugar da equipe.</p><p class="ex">Exemplo: RPA fiscal, consulta automática em portais de transportadoras</p></div>
+        <div class="service"><h3>Sistemas que não conversam</h3><p>Ligo ERP, WMS, banco de dados e Excel ou Google Sheets para a informação chegar sem digitação dupla.</p><p class="ex">Exemplo: conciliação de gate com pedidos</p></div>
+        <div class="service"><h3>Sistemas web sob medida</h3><p>Painéis internos, APIs e telas de operação feitos para o processo da empresa, e não o contrário.</p><p class="ex">Exemplo: plataforma interna para filiais em C#/.NET</p></div>
+        <div class="service"><h3>Relatórios e alertas</h3><p>Relatórios que se montam sozinhos e avisos por e-mail ou chat quando algo sai do normal.</p><p class="ex">Exemplo: alertas do SQL Server para e-mail e Slack</p></div>
+      </div>
     </div>
   </section>
 
-  <footer id="contato">
-    <div>
-      <div class="footer-name">Weslley Larroza</div>
-      <div class="footer-sub">Desenvolvedor & Automação · Formado em ADS · Itajaí, SC</div>
+  <section id="certificacoes">
+    <div class="wrap">
+      <h2>Formação contínua</h2>
+      <ul class="certs">
+        <li><b>AI-102</b>Azure AI Engineer, trilha DIO (30h)</li>
+        <li><b>AI-900</b>Azure AI Fundamentals, trilha DIO (15h)</li>
+        <li><b>Fluig</b>Avançado (40h) e mentoria TOTVS</li>
+        <li><b>Bootcamp</b>TOTVS Engenharia de Dados e ML</li>
+        <li><b>Bootcamp</b>Luizalabs Back-end Python</li>
+        <li><b>FastAPI</b>Assíncrono</li>
+        <li><b>Microsoft</b>AI Agents e Arquitetura de Dados com IA</li>
+        <li><b>GitHub</b>Certification (10h)</li>
+      </ul>
     </div>
-    <div class="footer-links">
-      <a href="https://github.com/weslley-larroza" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/weslley-larroza-b8bb57213" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </footer>
+  </section>
 
-</div>
+  <section id="contato" class="contact">
+    <div class="wrap">
+      <h2>Vamos conversar</h2>
+      <p>Procurando alguém para o seu time de desenvolvimento, ou tem um processo que toma horas da equipe toda semana? Uma conversa de 20 minutos já mostra se dá para automatizar.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.linkedin.com/in/weslley-larroza-b8bb57213">Falar no LinkedIn</a>
+        <!-- Descomente e preencha:
+        <a class="btn" href="mailto:contato@weslleylarroza.com.br">Mandar e-mail</a>
+        <a class="btn" href="https://wa.me/55DDDNUMERO">Chamar no WhatsApp</a>
+        -->
+        <a class="btn" href="cv/Weslley-Larroza-CV.pdf">Baixar CV</a>
+        <a class="btn" href="https://github.com/weslley-larroza">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Weslley Larroza, Itajaí, SC. 2026.</span>
+    <span><a href="https://github.com/weslley-larroza/portfolio">Código deste site</a></span>
+  </div>
+</footer>
 </body>
 </html>
