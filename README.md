@@ -41,8 +41,8 @@ O GitHub Pages foi desativado: desligue em Settings > Pages para não ficar com 
 
 ## Pendências
 
-- [ ] Adicionar o PDF do currículo em `cv/`
-- [ ] Criar o e-mail do domínio e descomentar o botão na seção Contato
+- [x] Adicionar o PDF do currículo em `cv/`
+- [ ] (Opcional) trocar o e-mail do Outlook por um e-mail no domínio
 - [ ] Atualizar o LinkedIn com o cargo atual
 
 ## Adicionar um certificado

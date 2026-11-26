@@ -19,7 +19,7 @@
 <meta property="og:image:alt" content="Weslley Larroza, desenvolvedor full stack e automação">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Weslley Larroza","jobTitle":"Desenvolvedor Full Stack e Automação","url":"https://weslleylarroza.com.br/","image":"https://github.com/weslley-larroza.png","address":{"@type":"PostalAddress","addressLocality":"Itajaí","addressRegion":"SC","addressCountry":"BR"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Uniasselvi"},"knowsAbout":["C#",".NET","Python","JavaScript","Flutter","RPA","Automação de processos","TOTVS Fluig","SQL Server"],"sameAs":["https://www.linkedin.com/in/weslley-larroza-b8bb57213","https://github.com/weslley-larroza"]}
+{"@context":"https://schema.org","@type":"Person","name":"Weslley Larroza","jobTitle":"Desenvolvedor Full Stack e Automação","url":"https://weslleylarroza.com.br/","image":"https://github.com/weslley-larroza.png","address":{"@type":"PostalAddress","addressLocality":"Itajaí","addressRegion":"SC","addressCountry":"BR"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Uniasselvi"},"knowsAbout":["C#",".NET","Python","JavaScript","Flutter","RPA","Automação de processos","TOTVS Fluig","SQL Server"],"email":"mailto:weslleylarroza@outlook.com","sameAs":["https://www.linkedin.com/in/weslley-larroza-b8bb57213","https://github.com/weslley-larroza"]}
 </script>
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233D4BE0'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='14' fill='white' text-anchor='middle'%3EWL%3C/text%3E%3C/svg%3E">
@@ -124,6 +124,15 @@
   .about{ display:grid; grid-template-columns:1.2fr 1fr; gap:64px; align-items:start; }
   .about .prose p{ margin-bottom:16px; max-width:60ch; color:#2E3247; }
   .about .prose p:first-child{ font-size:22px; line-height:1.4; color:var(--ink); font-family:var(--display); letter-spacing:-.01em; }
+  .timeline{ list-style:none; border-left:2px solid var(--line); padding-left:28px; }
+  .timeline li{ position:relative; padding-bottom:28px; }
+  .timeline li:last-child{ padding-bottom:0; }
+  .timeline li::before{ content:""; position:absolute; left:-36px; top:4px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--accent); }
+  .timeline li:first-child::before{ background:var(--accent); }
+  .timeline .when{ font-size:14px; font-weight:600; color:var(--accent-ink); font-variant-numeric:tabular-nums; }
+  .timeline h3{ font-family:var(--display); font-size:20px; font-weight:650; letter-spacing:-.01em; margin-top:2px; line-height:1.25; }
+  .timeline .org{ font-weight:600; color:#2E3247; font-size:15.5px; }
+  .timeline p{ color:var(--muted); font-size:15.5px; margin-top:4px; }
   .stats{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
   .stat{ background:#fff; border-radius:20px; padding:20px; }
   .stat b{ display:block; font-family:var(--display); font-size:34px; font-weight:700; letter-spacing:-.03em; line-height:1.1; }
@@ -297,7 +306,7 @@
           <div class="areas" role="tablist" aria-label="Área">
             <button type="button" role="tab" id="tab-adm" aria-controls="flow-panel" data-area="adm" aria-selected="true">Administrativo</button>
             <button type="button" role="tab" id="tab-fin" aria-controls="flow-panel" data-area="fin" aria-selected="false">Financeiro e fiscal</button>
-            <button type="button" role="tab" id="tab-ops" aria-controls="flow-panel" data-area="ops" aria-selected="false">Operação</button>
+            <button type="button" role="tab" id="tab-ops" aria-controls="flow-panel" data-area="ops" aria-selected="false">Expedição</button>
           </div>
           <div class="toggle" role="group" aria-label="Comparar">
             <button type="button" data-mode="antes" aria-pressed="true">Antes</button>
@@ -307,7 +316,7 @@
         <div class="flow-card" id="flow-panel" role="tabpanel" aria-labelledby="tab-adm">
           <div class="sr-only" id="flow-status" aria-live="polite"></div>
           <div class="swap" id="flow-body"></div>
-          <p class="note">Baseado em processos que já automatizei. O ganho de tempo varia de empresa para empresa.</p>
+          <p class="note">Processos que já automatizei.</p>
         </div>
       </div>
     </div>
@@ -328,15 +337,15 @@
           <div class="body"><div class="p-tags"><span class="p-tag">Operação</span><span class="p-tag">Web</span><span class="p-tag">3D</span><span class="p-tag state">Demo ao vivo</span></div><h3>LogiPlan Pro</h3><p>Simulador de carregamento e cubagem. Recebe a lista de itens, calcula pilhas, peso e ocupação do veículo ou armazém e mostra a carga em 3D, com aviso de excesso de peso.</p><p class="p-tech">JavaScript, Plotly.js, Bootstrap</p><p class="p-links"><a href="https://weslley-larroza.github.io/-Logiplan-demo/">Abrir demo</a><a href="https://github.com/weslley-larroza/-Logiplan-demo">Código</a></p></div>
         </article>
         <article class="project">
-          <div class="p-tags"><span class="p-tag">Administrativo</span><span class="p-tag">Sistema web</span><span class="p-tag state">Em produção</span></div>
+          <div class="p-tags"><span class="p-tag">Administrativo</span><span class="p-tag">Sistema web</span><span class="p-tag state">Em desenvolvimento</span></div>
           <h3>Plataforma web interna para filiais</h3>
-          <p>Sistema usado pelas filiais de uma distribuidora para centralizar rotinas que antes corriam por e-mail e planilha. API REST em C# com front-end em JavaScript, relatórios em SQL Server e monitoramento com alertas por e-mail e Slack.</p>
+          <p>Sistema web para uso interno da Soollar, desenvolvido em conjunto com a equipe da matriz. API REST em C# com front-end em HTML, CSS e JavaScript e integração com SQL Server. Deploy previsto nas filiais.</p>
           <p class="p-tech">C# / .NET, JavaScript, SQL Server</p>
         </article>
         <article class="project">
           <div class="p-tags"><span class="p-tag">Financeiro e fiscal</span><span class="p-tag">RPA</span><span class="p-tag state">Em produção</span></div>
           <h3>Automação fiscal (RPA)</h3>
-          <p>Valida e transmite documentos fiscais em sistemas do governo, confere a tela por visão computacional para evitar falso positivo e avisa a equipe quando algo falha. O código público é uma versão de demonstração, reescrita sem dados da empresa.</p>
+          <p>Valida e transmite documentos fiscais em sistemas do governo, confere a tela por visão computacional para evitar falso positivo e avisa a equipe quando algo falha. Tirou do manual um processo que levava horas por lote. O código público é uma versão de demonstração, sem dados da empresa.</p>
           <p class="p-tech">Python, Playwright, OpenCV, Supabase</p><p class="p-links"><a href="https://github.com/weslley-larroza/FCI-Automation-Suite">Código</a></p>
         </article>
         <article class="project">
@@ -359,7 +368,7 @@
       <h3 class="more-title">Outros projetos</h3>
       <ul class="more">
         <li><b>Conciliação de sistema e planilhas</b>Em desenvolvimento. Cruza um sistema de gestão com as planilhas da equipe e aponta divergências.</li>
-        <li><a href="https://github.com/weslley-larroza/App-android-update-fotos">App de fotos de pedidos</a>Flutter, funciona offline e reenvia quando a conexão volta.</li>
+        <li><a href="https://github.com/weslley-larroza/App-android-update-fotos">App de fotos de pedidos</a>Flutter, em uso pela equipe de expedição. Funciona offline e reenvia quando a conexão volta.</li>
         <li><a href="https://github.com/weslley-larroza/monitor_armazenamento">Monitor de armazenamento</a>App Flutter que envia o uso de armazenamento de vários aparelhos para um servidor.</li>
         <li><a href="https://github.com/weslley-larroza/Tradutor-de-Artigos-T-cnicos-com-AzureAI">Tradutor de artigos técnicos</a>Python com Azure OpenAI, mantendo o contexto técnico do texto.</li>
         <li><a href="https://github.com/weslley-larroza/An-lise-de-Documentos-Anti-fraude-com-AzureA">API antifraude</a>Pontua o risco de fraude de transações, com documentação da API.</li>
@@ -371,19 +380,35 @@
 
   <section id="sobre">
     <div class="wrap">
-      <div class="head"><h2>Trajetória</h2></div>
+      <div class="head">
+        <h2>Trajetória</h2>
+        <p class="sub">Mais de 3 anos unindo infraestrutura de TI e desenvolvimento de software.</p>
+      </div>
       <div class="about">
-      <div class="prose">
-        <p>Comecei na infraestrutura de TI e passei para o desenvolvimento resolvendo os problemas que via no dia a dia das equipes.</p>
-        <p>Fui o único técnico de TI de uma filial, cuidando de servidores, redes, Active Directory e suporte. Isso me ensinou a entender o que acontece por trás de um sistema, não só a camada de código.</p>
-        <p>No desenvolvimento, construí uma plataforma web interna para filiais (API REST em C# com front-end em JavaScript), robôs de RPA fiscal, monitoramento com alertas automáticos e um app Flutter que funciona offline. Hoje desenvolvo ferramentas que cruzam sistemas e planilhas para eliminar conferência manual.</p>
-      </div>
-      <div class="stats">
-        <div class="stat"><b>3</b><span>sistemas em produção usados por equipes no dia a dia</span></div>
-        <div class="stat"><b>ADS</b><span>Tecnólogo em Análise e Desenvolvimento de Sistemas, Uniasselvi</span></div>
-        <div class="stat"><b>C# e Python</b><span>linguagens principais no backend e na automação</span></div>
-        <div class="stat"><b>Fluig</b><span>workflows integrados ao ERP TOTVS</span></div>
-      </div>
+        <div class="prose">
+          <p>Comecei na infraestrutura de TI e passei para o desenvolvimento resolvendo os problemas que via no dia a dia das equipes.</p>
+          <p>Na Soollar, era o único técnico de TI da filial, cuidando de servidores, redes, Active Directory, telefonia e suporte. Isso me ensinou a entender o que acontece por trás de um sistema, não só a camada de código.</p>
+          <p>Ao mesmo tempo, passei a desenvolver junto com a equipe da matriz: automação fiscal com RPA, monitoramento com alertas automáticos, um app Flutter usado pela expedição e uma plataforma web interna em C#. Hoje trabalho na logística de exportação e sigo aplicando automação no dia a dia da operação.</p>
+        </div>
+        <ol class="timeline">
+          <li>
+            <span class="when">09/2026 – atual</span>
+            <h3>Assistente Logístico</h3>
+            <p class="org">Brasfrigo (Grupo BMG), Itajaí</p>
+            <p>Operação de exportação. Uso automação para cruzar sistemas e planilhas da operação.</p>
+          </li>
+          <li>
+            <span class="when">05/2023 – 09/2026</span>
+            <h3>Assistente de TI e desenvolvimento</h3>
+            <p class="org">Soollar Distribuidora, Itajaí</p>
+            <p>Único técnico de TI da filial e desenvolvimento com a equipe da matriz: RPA fiscal, monitoramento, app Flutter e plataforma web em C#.</p>
+          </li>
+          <li>
+            <span class="when">2023 – 2025</span>
+            <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+            <p class="org">Uniasselvi</p>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
@@ -492,14 +517,12 @@
       <div>
         <h2>Vamos conversar?</h2>
         <p>Procurando alguém para o seu time, ou tem um processo que toma horas da equipe toda semana? Em 20 minutos de conversa dá para saber se vale automatizar.</p>
-        <p class="phone">WhatsApp: <a href="https://wa.me/5547992314420?text=Ol%C3%A1%20Weslley%2C%20vi%20seu%20site%20e%20gostaria%20de%20conversar.">(47) 99231-4420</a></p>
+        <p class="phone"><a href="mailto:weslleylarroza@outlook.com">weslleylarroza@outlook.com</a><br>WhatsApp: <a href="https://wa.me/5547992314420?text=Ol%C3%A1%20Weslley%2C%20vi%20seu%20site%20e%20gostaria%20de%20conversar.">(47) 99231-4420</a></p>
       </div>
       <div class="actions">
         <a class="btn primary" href="https://wa.me/5547992314420?text=Ol%C3%A1%20Weslley%2C%20vi%20seu%20site%20e%20gostaria%20de%20conversar.">Chamar no WhatsApp</a>
         <a class="btn" href="https://www.linkedin.com/in/weslley-larroza-b8bb57213">LinkedIn</a>
-        <!-- Quando tiver o e-mail do domínio, descomente:
-        <a class="btn" href="mailto:contato@weslleylarroza.com.br">Mandar e-mail</a>
-        -->
+        <a class="btn" href="mailto:weslleylarroza@outlook.com?subject=Contato%20pelo%20site">Mandar e-mail</a>
         <a class="btn" href="cv/Weslley-Larroza-CV.pdf" download>Baixar CV</a>
         <a class="btn" href="https://github.com/weslley-larroza">GitHub</a>
       </div>
@@ -517,7 +540,7 @@
 <a class="wa-float" href="https://wa.me/5547992314420?text=Ol%C3%A1%20Weslley%2C%20vi%20seu%20site%20e%20gostaria%20de%20conversar." aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>WhatsApp</a>
 
 <script>
-  const FLOWS = {"adm": {"antes": {"t": "Relatório semanal da gestão", "time": "≈ 4 horas por semana", "s": ["Exportar dados de dois sistemas diferentes", "Colar tudo numa planilha e ajustar colunas na mão", "Montar gráficos e mandar por e-mail para cada gestor"]}, "depois": {"t": "Relatório semanal da gestão", "time": "Pronto toda segunda às 8h", "s": ["Os dados são lidos direto dos sistemas", "A planilha e os gráficos são gerados sozinhos", "Cada gestor recebe o seu por e-mail ou Slack"]}}, "fin": {"antes": {"t": "Envio de documentos fiscais", "time": "Horas de conferência por dia", "s": ["Abrir cada documento no portal do governo", "Conferir status tela por tela", "Reenviar o que falhou e anotar numa planilha"]}, "depois": {"t": "Envio de documentos fiscais", "time": "A equipe só trata as exceções", "s": ["Um robô valida e transmite cada documento", "O retorno de cada protocolo é gravado no banco", "Falhas geram alerta automático com o motivo"]}}, "ops": {"antes": {"t": "Conferência de pedidos", "time": "Retrabalho todo dia", "s": ["Comparar o sistema com a planilha da equipe linha a linha", "Procurar divergências no olho", "Atualizar várias planilhas compartilhadas"]}, "depois": {"t": "Conferência de pedidos", "time": "Divergências apontadas na hora", "s": ["Sistema e planilhas cruzados automaticamente", "Diferenças destacadas antes de virar problema", "Planilhas compartilhadas sempre sincronizadas"]}}};
+  const FLOWS = {"adm": {"antes": {"t": "Controle de pendências", "time": "Checagem manual todo dia", "s": ["Abrir o sistema e filtrar as pendências", "Conferir uma a uma no banco de dados", "Avisar cada responsável por mensagem"]}, "depois": {"t": "Controle de pendências", "time": "Alertas automáticos, sem checagem manual", "s": ["Um robô consulta as bases em ciclos", "As pendências viram um único alerta consolidado", "A equipe recebe por e-mail e Slack"]}}, "fin": {"antes": {"t": "Envio de documentos fiscais", "time": "Horas de trabalho manual por lote", "s": ["Gerar e validar cada documento à mão", "Transmitir no sistema do governo tela por tela", "Voltar depois para conferir os retornos"]}, "depois": {"t": "Envio de documentos fiscais", "time": "Roda sozinho, em segundo plano", "s": ["Um robô gera, valida e transmite os documentos", "Os retornos são consultados automaticamente", "Falhas geram alerta com o motivo"]}}, "ops": {"antes": {"t": "Fotos dos pedidos", "time": "Fotos espalhadas e perdidas", "s": ["Fotos tiradas no celular de cada um", "Enviadas por mensagem, sem padrão", "Difícil achar a foto de um pedido depois"]}, "depois": {"t": "Fotos dos pedidos", "time": "Em uso pela equipe de expedição", "s": ["App vincula cada foto ao número do pedido", "Imagem redimensionada automaticamente", "Sem internet, guarda e reenvia depois"]}}};
   const flow = document.getElementById('flow');
   const body = document.getElementById('flow-body');
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
