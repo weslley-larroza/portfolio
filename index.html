@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weslley Larroza, desenvolvedor full stack e automação de processos</title>
+<title>Weslley Larroza | Desenvolvedor Full Stack e Automação</title>
 <meta name="description" content="Weslley Larroza, desenvolvedor full stack. Automatizo processos e conecto sistemas para áreas administrativas, financeiras, comerciais e de operação. C#/.NET, Python, JavaScript e Flutter.">
 <meta name="author" content="Weslley Larroza">
 <link rel="canonical" href="https://weslleylarroza.com.br/">
@@ -12,13 +12,22 @@
 <meta property="og:title" content="Weslley Larroza, desenvolvedor full stack e automação de processos">
 <meta property="og:description" content="Automatizo processos e conecto sistemas para empresas de qualquer área.">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://github.com/weslley-larroza.png?size=400">
-<meta name="theme-color" content="#14162B">
+<meta property="og:site_name" content="Weslley Larroza">
+<meta property="og:image" content="https://weslleylarroza.com.br/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Weslley Larroza, desenvolvedor full stack e automação">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Weslley Larroza","jobTitle":"Desenvolvedor Full Stack e Automação","url":"https://weslleylarroza.com.br/","image":"https://github.com/weslley-larroza.png","address":{"@type":"PostalAddress","addressLocality":"Itajaí","addressRegion":"SC","addressCountry":"BR"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Uniasselvi"},"knowsAbout":["C#",".NET","Python","JavaScript","Flutter","RPA","Automação de processos","TOTVS Fluig","SQL Server"],"email":"mailto:weslleylarroza@outlook.com","sameAs":["https://www.linkedin.com/in/weslley-larroza-b8bb57213","https://github.com/weslley-larroza"]}
+</script>
+<meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233D4BE0'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='14' fill='white' text-anchor='middle'%3EWL%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  @font-face{ font-family:'Bricolage Grotesque'; font-style:normal; font-weight:200 800; font-display:swap; src:url(assets/fonts/bricolage-grotesque.woff2) format('woff2'); }
+  @font-face{ font-family:'Instrument Sans'; font-style:normal; font-weight:400 700; font-display:swap; src:url(assets/fonts/instrument-sans.woff2) format('woff2'); }
   :root{
     --bg:#FFFFFF;
     --surface:#F2F4F7;
@@ -33,11 +42,14 @@
     --display:'Bricolage Grotesque', system-ui, sans-serif;
   }
   *{ margin:0; padding:0; box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
+  html{ scroll-behavior:smooth; scroll-padding-top:84px; }
   body{ background:var(--bg); color:var(--ink); font-family:'Instrument Sans', system-ui, sans-serif; font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
   a{ color:var(--accent); text-underline-offset:3px; }
+  a, button{ touch-action:manipulation; }
+  h1, h2, h3{ text-wrap:balance; }
   :focus-visible{ outline:3px solid var(--accent); outline-offset:3px; border-radius:6px; }
   .wrap{ max-width:1120px; margin:0 auto; padding:0 28px; }
+  .sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
   .skip{ position:absolute; left:-999px; top:8px; background:var(--ink); color:#fff; padding:8px 14px; z-index:50; border-radius:8px; }
   .skip:focus{ left:8px; }
 
@@ -50,6 +62,9 @@
   .top nav a:hover{ color:var(--ink); }
   .top nav a.cv{ color:#fff; background:var(--ink); padding:8px 16px; border-radius:999px; font-weight:600; }
   .top nav a.cv:hover{ background:var(--accent); color:#fff; }
+  .cv-m{ display:none; color:#fff; background:var(--ink); padding:7px 14px; border-radius:999px; font-weight:600; font-size:14px; text-decoration:none; }
+  .wa-float{ display:none; position:fixed; right:16px; bottom:16px; z-index:30; align-items:center; gap:8px; height:52px; padding:0 18px 0 14px; border-radius:999px; background:#128C4A; color:#fff; font-weight:600; font-size:15px; text-decoration:none; box-shadow:0 6px 20px rgba(18,140,74,.35); }
+  .wa-float svg{ width:22px; height:22px; fill:#fff; }
 
   .hero{ position:relative; overflow:hidden; padding:84px 0 96px; }
   .hero .wrap{ position:relative; z-index:1; }
@@ -62,6 +77,8 @@
            stroke-dasharray:14 400; stroke-dashoffset:414; animation:pulse 5.5s linear infinite; }
   @keyframes pulse{ to{ stroke-dashoffset:0; } }
   .hero .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+  .role{ display:inline-flex; align-items:center; gap:8px; margin-bottom:20px; font-size:15px; font-weight:600; color:var(--accent-ink); background:var(--lilac); padding:6px 14px; border-radius:999px; }
+  .role::before{ content:""; width:8px; height:8px; border-radius:50%; background:var(--ok); }
   .hero h1{ font-family:var(--display); font-size:clamp(42px, 5.6vw, 70px); font-weight:700; line-height:1.02; letter-spacing:-.035em; font-variation-settings:"opsz" 96; }
   .hero .lede{ margin-top:24px; font-size:19px; color:var(--muted); max-width:46ch; }
   .who{ margin-top:28px; display:flex; align-items:center; gap:14px; font-size:15px; color:var(--muted); }
@@ -107,6 +124,15 @@
   .about{ display:grid; grid-template-columns:1.2fr 1fr; gap:64px; align-items:start; }
   .about .prose p{ margin-bottom:16px; max-width:60ch; color:#2E3247; }
   .about .prose p:first-child{ font-size:22px; line-height:1.4; color:var(--ink); font-family:var(--display); letter-spacing:-.01em; }
+  .timeline{ list-style:none; border-left:2px solid var(--line); padding-left:28px; }
+  .timeline li{ position:relative; padding-bottom:28px; }
+  .timeline li:last-child{ padding-bottom:0; }
+  .timeline li::before{ content:""; position:absolute; left:-36px; top:4px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--accent); }
+  .timeline li:first-child::before{ background:var(--accent); }
+  .timeline .when{ font-size:14px; font-weight:600; color:var(--accent-ink); font-variant-numeric:tabular-nums; }
+  .timeline h3{ font-family:var(--display); font-size:20px; font-weight:650; letter-spacing:-.01em; margin-top:2px; line-height:1.25; }
+  .timeline .org{ font-weight:600; color:#2E3247; font-size:15.5px; }
+  .timeline p{ color:var(--muted); font-size:15.5px; margin-top:4px; }
   .stats{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
   .stat{ background:#fff; border-radius:20px; padding:20px; }
   .stat b{ display:block; font-family:var(--display); font-size:34px; font-weight:700; letter-spacing:-.03em; line-height:1.1; }
@@ -141,9 +167,14 @@
   .more-title{ margin-top:40px; font-size:16px; font-weight:700; }
   .more{ margin-top:14px; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; list-style:none; }
   .more li{ font-size:15px; color:var(--muted); }
-  .more a{ display:block; font-weight:600; }
+  .more a, .more b{ display:block; font-weight:600; }
+  .more b{ color:var(--ink); }
 
   .stack{ display:grid; grid-template-columns:repeat(3,1fr); gap:32px 40px; }
+  .stack-group + .stack-group{ margin-top:48px; padding-top:40px; border-top:1px solid var(--line); }
+  .stack-group > h3{ font-family:var(--display); font-size:22px; font-weight:650; letter-spacing:-.015em; margin-bottom:6px; }
+  .stack-group > p{ color:var(--muted); margin-bottom:24px; }
+  .chips.soft li{ background:#fff; border:1px solid var(--line); color:#3A3F56; }
   .stack h3{ font-size:15px; font-weight:700; margin-bottom:10px; }
   .chips{ display:flex; flex-wrap:wrap; gap:8px; list-style:none; }
   .chips li{ font-size:14.5px; padding:6px 12px; border-radius:10px; background:var(--surface); }
@@ -161,9 +192,18 @@
   .cert-list li{ display:grid; grid-template-columns:1fr auto auto; gap:20px; align-items:center; padding:13px 0; border-bottom:1px solid var(--line); font-size:15.5px; }
   .cert-list li:last-of-type{ border-bottom:none; }
   .cert-list li[hidden]{ display:none; }
-  .cert-list .meta{ color:var(--muted); font-size:14px; white-space:nowrap; }
+  .cert-list .meta{ color:var(--muted); font-size:14px; white-space:nowrap; font-variant-numeric:tabular-nums; }
   .cert-list a{ font-weight:600; font-size:14.5px; white-space:nowrap; }
   .cert-foot{ margin-top:14px; font-size:14.5px; color:var(--muted); }
+  .all-certs{ margin-top:8px; }
+  .all-certs > summary{ cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:10px; height:46px; padding:0 20px; border-radius:999px; background:#fff; border:1.5px solid var(--line); font-weight:600; font-size:15px; }
+  .all-certs > summary::-webkit-details-marker{ display:none; }
+  .all-certs > summary::after{ content:""; width:8px; height:8px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(45deg) translateY(-2px); transition:transform .2s; }
+  .all-certs[open] > summary::after{ transform:rotate(-135deg) translateY(-2px); }
+  .all-certs > summary:hover{ border-color:var(--ink); }
+  .all-certs[open] > summary{ margin-bottom:20px; }
+  .ch.static{ cursor:default; }
+  .ch.static:hover{ border-color:var(--line); transform:none; }
 
   .contact{ background:var(--ink); color:#fff; }
   .contact .wrap{ display:grid; grid-template-columns:1.2fr 1fr; gap:48px; align-items:end; }
@@ -192,10 +232,18 @@
   }
   @media (max-width: 640px){
     .more{ grid-template-columns:1fr; }
+    html{ scroll-padding-top:112px; }
+    footer .wrap{ padding-bottom:84px; }
     .net{ opacity:.35; }
     body{ font-size:16px; }
     .wrap{ padding:0 20px; }
-    .top nav a:not(.cv){ display:none; }
+    .top .wrap{ height:auto; flex-wrap:wrap; padding-top:12px; padding-bottom:0; row-gap:4px; }
+    .top nav{ order:3; width:100%; gap:22px; overflow-x:auto; padding:6px 0 12px; scrollbar-width:none; }
+    .top nav::-webkit-scrollbar{ display:none; }
+    .top nav a{ white-space:nowrap; }
+    .top nav a.cv{ display:none; }
+    .brand + .cv-m{ display:inline-flex; }
+    .wa-float{ display:flex; }
     .hero{ padding:52px 0 72px; }
     section{ padding:72px 0; }
     .area-grid, .projects, .stack{ grid-template-columns:1fr; }
@@ -220,14 +268,16 @@
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#"><i aria-hidden="true">WL</i>Weslley Larroza</a>
+    <a class="brand" href="#conteudo"><i aria-hidden="true">WL</i>Weslley Larroza</a>
+    <a class="cv-m" href="cv/Weslley-Larroza-CV.pdf" download>Baixar CV</a>
     <nav aria-label="Seções">
-      <a href="#sobre">Sobre</a>
-      <a href="#areas">Onde ajudo</a>
       <a href="#projetos">Projetos</a>
-      <a href="#certificados">Certificados</a>
+      <a href="#sobre">Trajetória</a>
+      <a href="#areas">Onde ajudo</a>
+      <a href="#stack">Tecnologias</a>
+      <a href="#certificados">Formação</a>
       <a href="#contato">Contato</a>
-      <a class="cv" href="cv/Weslley-Larroza-CV.pdf">Baixar CV</a>
+      <a class="cv" href="cv/Weslley-Larroza-CV.pdf" download>Baixar CV</a>
     </nav>
   </div>
 </header>
@@ -237,15 +287,16 @@
     <svg class="net" viewBox="0 0 1400 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><line class="e" x1="822" y1="619" x2="908" y2="593"/><line class="e" x1="34" y1="283" x2="8" y2="381"/><line class="e" x1="849" y1="522" x2="908" y2="593"/><line class="e" x1="945" y1="60" x2="1053" y2="23"/><line class="e" x1="1360" y1="4" x2="1417" y2="122"/><line class="e" x1="129" y1="358" x2="234" y2="402"/><line class="e" x1="1031" y1="153" x2="1018" y2="280"/><line class="e" x1="1386" y1="596" x2="1352" y2="723"/><line class="e" x1="125" y1="611" x2="43" y2="706"/><line class="e" x1="27" y1="169" x2="34" y2="283"/><line class="e" x1="234" y1="402" x2="351" y2="367"/><line class="e" x1="612" y1="143" x2="699" y2="154"/><line class="e" x1="908" y1="593" x2="1037" y2="604"/><line class="e" x1="407" y1="515" x2="384" y2="596"/><line class="e" x1="847" y1="296" x2="921" y2="378"/><line class="e" x1="1250" y1="366" x2="1252" y2="479"/><line class="e" x1="1366" y1="383" x2="1373" y2="472"/><line class="e" x1="1053" y1="23" x2="1192" y2="-1"/><line class="e" x1="1162" y1="174" x2="1170" y2="300"/><line class="e" x1="273" y1="139" x2="379" y2="118"/><line class="e" x1="699" y1="154" x2="717" y2="263"/><line class="e" x1="1288" y1="134" x2="1294" y2="251"/><line class="e" x1="489" y1="510" x2="471" y2="610"/><line class="e" x1="289" y1="751" x2="360" y2="729"/><line class="e" x1="1182" y1="597" x2="1240" y2="651"/><line class="e" x1="612" y1="472" x2="591" y2="594"/><line class="e" x1="845" y1="771" x2="960" y2="759"/><line class="e" x1="379" y1="118" x2="458" y2="128"/><line class="e" x1="1170" y1="300" x2="1250" y2="366"/><line class="e" x1="118" y1="496" x2="125" y2="611"/><line class="e" x1="736" y1="654" x2="822" y2="619"/><line class="e" x1="360" y1="729" x2="465" y2="756"/><line class="e" x1="1191" y1="360" x2="1250" y2="366"/><line class="e" x1="27" y1="169" x2="130" y2="154"/><line class="e" x1="128" y1="265" x2="129" y2="358"/><line class="e" x1="407" y1="515" x2="489" y2="510"/><line class="e" x1="465" y1="756" x2="602" y2="757"/><line class="e" x1="1373" y1="472" x2="1386" y2="596"/><line class="e" x1="846" y1="409" x2="921" y2="378"/><line class="e" x1="1162" y1="174" x2="1288" y2="134"/><line class="e" x1="43" y1="706" x2="154" y2="771"/><line class="e" x1="602" y1="757" x2="700" y2="719"/><line class="e" x1="699" y1="154" x2="821" y2="134"/><line class="e" x1="1288" y1="134" x2="1417" y2="122"/><line class="e" x1="154" y1="771" x2="289" y2="751"/><line class="e" x1="233" y1="277" x2="234" y2="402"/><line class="e" x1="715" y1="410" x2="612" y2="472"/><line class="e" x1="46" y1="486" x2="118" y2="496"/><line class="e" x1="394" y1="271" x2="351" y2="367"/><line class="e" x1="1021" y1="511" x2="1037" y2="604"/><line class="e" x1="1262" y1="706" x2="1352" y2="723"/><line class="e" x1="945" y1="60" x2="1031" y2="153"/><line class="e" x1="118" y1="496" x2="255" y2="507"/><line class="e" x1="266" y1="21" x2="273" y2="139"/><line class="e" x1="514" y1="253" x2="613" y2="272"/><line class="e" x1="1130" y1="473" x2="1182" y2="597"/><line class="e" x1="34" y1="283" x2="128" y2="265"/><line class="e" x1="956" y1="162" x2="1031" y2="153"/><line class="e" x1="346" y1="31" x2="379" y2="118"/><line class="e" x1="613" y1="272" x2="717" y2="263"/><line class="e" x1="960" y1="759" x2="1070" y2="754"/><line class="e" x1="128" y1="265" x2="233" y2="277"/><line class="e" x1="1170" y1="300" x2="1191" y2="360"/><line class="e" x1="571" y1="2" x2="707" y2="52"/><line class="e" x1="929" y1="495" x2="1021" y2="511"/><line class="e" x1="457" y1="25" x2="458" y2="128"/><line class="e" x1="1070" y1="754" x2="1141" y2="739"/><line class="e" x1="162" y1="1" x2="266" y2="21"/><line class="e" x1="28" y1="6" x2="27" y2="169"/><line class="e" x1="1038" y1="410" x2="1130" y2="473"/><line class="e" x1="6" y1="596" x2="43" y2="706"/><line class="e" x1="1141" y1="739" x2="1262" y2="706"/><line class="e" x1="707" y1="52" x2="699" y2="154"/><line class="e" x1="394" y1="271" x2="514" y2="253"/><line class="e" x1="700" y1="719" x2="845" y2="771"/><line class="e" x1="847" y1="296" x2="846" y2="409"/><line class="e" x1="1021" y1="511" x2="1130" y2="473"/><line class="e" x1="481" y1="409" x2="489" y2="510"/><line class="e" x1="266" y1="21" x2="346" y2="31"/><line class="e" x1="8" y1="381" x2="46" y2="486"/><line class="e" x1="934" y1="277" x2="921" y2="378"/><line class="e" x1="1296" y1="16" x2="1288" y2="134"/><line class="e" x1="1240" y1="651" x2="1262" y2="706"/><line class="e" x1="736" y1="654" x2="700" y2="719"/><line class="e" x1="346" y1="31" x2="457" y2="25"/><line class="e" x1="739" y1="521" x2="849" y2="522"/><line class="e" x1="798" y1="11" x2="821" y2="134"/><line class="e" x1="232" y1="645" x2="289" y2="751"/><line class="e" x1="571" y1="381" x2="612" y2="472"/><line class="e" x1="945" y1="60" x2="956" y2="162"/><line class="e" x1="384" y1="596" x2="471" y2="610"/><line class="e" x1="1252" y1="479" x2="1373" y2="472"/><line class="e" x1="715" y1="410" x2="739" y2="521"/><line class="e" x1="457" y1="25" x2="571" y2="2"/><line class="e" x1="849" y1="522" x2="929" y2="495"/><line class="e" x1="234" y1="402" x2="255" y2="507"/><line class="e" x1="471" y1="610" x2="591" y2="594"/><line class="e" x1="612" y1="143" x2="613" y2="272"/><line class="e" x1="28" y1="6" x2="162" y2="1"/><line class="e" x1="1192" y1="-1" x2="1296" y2="16"/><line class="e" x1="130" y1="154" x2="128" y2="265"/><line class="e" x1="1053" y1="23" x2="1031" y2="153"/><line class="e" x1="1294" y1="251" x2="1376" y2="277"/><line class="e" x1="707" y1="52" x2="798" y2="11"/><line class="e" x1="847" y1="296" x2="934" y2="277"/><line class="e" x1="481" y1="409" x2="571" y2="381"/><line class="e" x1="46" y1="486" x2="6" y2="596"/><line class="e" x1="934" y1="277" x2="1018" y2="280"/><line class="e" x1="1376" y1="277" x2="1366" y2="383"/><line class="e" x1="1296" y1="16" x2="1360" y2="4"/><line class="e" x1="125" y1="611" x2="232" y2="645"/><line class="e" x1="1038" y1="410" x2="1021" y2="511"/><path class="p" d="M1366 383 L1376 277 L1294 251 L1288 134" style="animation-delay:-0.00s;animation-duration:7.3s"/><path class="p" d="M1031 153 L1053 23 L945 60 L956 162" style="animation-delay:-0.61s;animation-duration:4.9s"/><path class="p" d="M921 378 L846 409 L847 296 L934 277" style="animation-delay:-1.22s;animation-duration:5.8s"/><path class="p" d="M1162 174 L1288 134 L1294 251 L1376 277" style="animation-delay:-1.83s;animation-duration:7.3s"/><path class="p" d="M591 594 L471 610 L489 510 L481 409" style="animation-delay:-2.44s;animation-duration:7.1s"/><path class="p" d="M1038 410 L1130 473 L1182 597 L1240 651" style="animation-delay:-3.05s;animation-duration:7.2s"/><path class="p" d="M821 134 L699 154 L612 143 L613 272" style="animation-delay:-3.66s;animation-duration:7.5s"/><path class="p" d="M571 381 L481 409 L489 510 L471 610" style="animation-delay:-4.27s;animation-duration:5.6s"/><path class="p" d="M1192 -1 L1296 16 L1288 134 L1162 174" style="animation-delay:-4.88s;animation-duration:6.2s"/><circle class="n" cx="28" cy="6" r="2.5"/><circle class="n" cx="162" cy="1" r="2"/><circle class="n" cx="266" cy="21" r="2.5"/><circle class="n" cx="346" cy="31" r="3.5"/><circle class="n" cx="457" cy="25" r="2.5"/><circle class="n" cx="571" cy="2" r="2.5"/><circle class="n" cx="707" cy="52" r="2"/><circle class="n" cx="798" cy="11" r="2"/><circle class="n" cx="945" cy="60" r="2"/><circle class="n" cx="1053" cy="23" r="2"/><circle class="n" cx="1192" cy="-1" r="3.5"/><circle class="n" cx="1296" cy="16" r="2"/><circle class="n" cx="1360" cy="4" r="2.5"/><circle class="n" cx="27" cy="169" r="2"/><circle class="n" cx="130" cy="154" r="3.5"/><circle class="n" cx="273" cy="139" r="2"/><circle class="n" cx="379" cy="118" r="3.5"/><circle class="n" cx="458" cy="128" r="2.5"/><circle class="n" cx="612" cy="143" r="2"/><circle class="n" cx="699" cy="154" r="2"/><circle class="n" cx="821" cy="134" r="3.5"/><circle class="n" cx="956" cy="162" r="2"/><circle class="n" cx="1031" cy="153" r="3.5"/><circle class="n" cx="1162" cy="174" r="2"/><circle class="n" cx="1288" cy="134" r="3.5"/><circle class="n" cx="1417" cy="122" r="2.5"/><circle class="n" cx="34" cy="283" r="2"/><circle class="n" cx="128" cy="265" r="3.5"/><circle class="n" cx="233" cy="277" r="3.5"/><circle class="n" cx="394" cy="271" r="3.5"/><circle class="n" cx="514" cy="253" r="2"/><circle class="n" cx="613" cy="272" r="2"/><circle class="n" cx="717" cy="263" r="2"/><circle class="n" cx="847" cy="296" r="2"/><circle class="n" cx="934" cy="277" r="2"/><circle class="n" cx="1018" cy="280" r="2"/><circle class="n" cx="1170" cy="300" r="3.5"/><circle class="n" cx="1294" cy="251" r="2"/><circle class="n" cx="1376" cy="277" r="3.5"/><circle class="n" cx="8" cy="381" r="2.5"/><circle class="n" cx="129" cy="358" r="2"/><circle class="n" cx="234" cy="402" r="2"/><circle class="n" cx="351" cy="367" r="2"/><circle class="n" cx="481" cy="409" r="2"/><circle class="n" cx="571" cy="381" r="2"/><circle class="n" cx="715" cy="410" r="2"/><circle class="n" cx="846" cy="409" r="3.5"/><circle class="n" cx="921" cy="378" r="2"/><circle class="n" cx="1038" cy="410" r="2"/><circle class="n" cx="1191" cy="360" r="2"/><circle class="n" cx="1250" cy="366" r="2.5"/><circle class="n" cx="1366" cy="383" r="2"/><circle class="n" cx="46" cy="486" r="2.5"/><circle class="n" cx="118" cy="496" r="2"/><circle class="n" cx="255" cy="507" r="2.5"/><circle class="n" cx="407" cy="515" r="2.5"/><circle class="n" cx="489" cy="510" r="3.5"/><circle class="n" cx="612" cy="472" r="2"/><circle class="n" cx="739" cy="521" r="2"/><circle class="n" cx="849" cy="522" r="2.5"/><circle class="n" cx="929" cy="495" r="3.5"/><circle class="n" cx="1021" cy="511" r="3.5"/><circle class="n" cx="1130" cy="473" r="2"/><circle class="n" cx="1252" cy="479" r="2"/><circle class="n" cx="1373" cy="472" r="2"/><circle class="n" cx="6" cy="596" r="3.5"/><circle class="n" cx="125" cy="611" r="2"/><circle class="n" cx="232" cy="645" r="2"/><circle class="n" cx="384" cy="596" r="2"/><circle class="n" cx="471" cy="610" r="2"/><circle class="n" cx="591" cy="594" r="2"/><circle class="n" cx="736" cy="654" r="3.5"/><circle class="n" cx="822" cy="619" r="2"/><circle class="n" cx="908" cy="593" r="2"/><circle class="n" cx="1037" cy="604" r="2.5"/><circle class="n" cx="1182" cy="597" r="3.5"/><circle class="n" cx="1240" cy="651" r="2"/><circle class="n" cx="1386" cy="596" r="2"/><circle class="n" cx="43" cy="706" r="2"/><circle class="n" cx="154" cy="771" r="2"/><circle class="n" cx="289" cy="751" r="2.5"/><circle class="n" cx="360" cy="729" r="2"/><circle class="n" cx="465" cy="756" r="2"/><circle class="n" cx="602" cy="757" r="3.5"/><circle class="n" cx="700" cy="719" r="2"/><circle class="n" cx="845" cy="771" r="2"/><circle class="n" cx="960" cy="759" r="3.5"/><circle class="n" cx="1070" cy="754" r="2.5"/><circle class="n" cx="1141" cy="739" r="2"/><circle class="n" cx="1262" cy="706" r="2.5"/><circle class="n" cx="1352" cy="723" r="3.5"/></svg>
     <div class="wrap">
       <div>
+        <p class="role">Desenvolvedor Full Stack e Automação</p>
         <h1>Menos trabalho manual, mais tempo para o que importa.</h1>
-        <p class="lede">Sou desenvolvedor full stack. Automatizo processos e conecto sistemas, planilhas e pessoas, seja no administrativo, no financeiro, no comercial ou na operação.</p>
+        <p class="lede">Automatizo processos e integro sistemas e planilhas para áreas administrativas, financeiras, comerciais e de operação. Aberto a vagas e a projetos.</p>
         <div class="who">
           <span class="avatar"><img src="https://github.com/weslley-larroza.png?size=160" alt="Foto de Weslley Larroza" width="56" height="56" onerror="this.remove()">WL</span>
           <span><b>Weslley Larroza</b>C#/.NET, Python, JavaScript e Flutter. Itajaí, SC</span>
         </div>
         <div class="actions">
           <a class="btn primary" href="#projetos">Ver projetos</a>
-          <a class="btn" href="cv/Weslley-Larroza-CV.pdf">Baixar CV</a>
+          <a class="btn" href="cv/Weslley-Larroza-CV.pdf" download>Baixar CV</a>
           <a class="btn" href="https://www.linkedin.com/in/weslley-larroza-b8bb57213">LinkedIn</a>
         </div>
       </div>
@@ -253,40 +304,109 @@
       <div class="flow" id="flow" data-mode="antes">
         <div class="flow-top">
           <div class="areas" role="tablist" aria-label="Área">
-            <button type="button" role="tab" data-area="adm" aria-selected="true">Administrativo</button>
-            <button type="button" role="tab" data-area="fin" aria-selected="false">Financeiro e fiscal</button>
-            <button type="button" role="tab" data-area="ops" aria-selected="false">Operação</button>
+            <button type="button" role="tab" id="tab-adm" aria-controls="flow-panel" data-area="adm" aria-selected="true">Administrativo</button>
+            <button type="button" role="tab" id="tab-fin" aria-controls="flow-panel" data-area="fin" aria-selected="false">Financeiro e fiscal</button>
+            <button type="button" role="tab" id="tab-ops" aria-controls="flow-panel" data-area="ops" aria-selected="false">Expedição</button>
           </div>
           <div class="toggle" role="group" aria-label="Comparar">
             <button type="button" data-mode="antes" aria-pressed="true">Antes</button>
             <button type="button" data-mode="depois" aria-pressed="false">Depois</button>
           </div>
         </div>
-        <div class="flow-card" role="tabpanel" aria-live="polite">
+        <div class="flow-card" id="flow-panel" role="tabpanel" aria-labelledby="tab-adm">
+          <div class="sr-only" id="flow-status" aria-live="polite"></div>
           <div class="swap" id="flow-body"></div>
-          <p class="note">Exemplos de processos que já automatizei.</p>
+          <p class="note">Processos que já automatizei.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <section id="sobre" class="alt">
-    <div class="wrap about">
-      <div class="prose">
-        <p>Comecei na infraestrutura de TI e fui para o desenvolvimento resolvendo os problemas que via no dia a dia das equipes.</p>
-        <p>Fui o único técnico de TI de uma filial, cuidando de servidores, redes, Active Directory e suporte. Isso me ensinou a entender o que acontece por trás de um sistema, não só a camada de código.</p>
-        <p>No desenvolvimento, construí uma plataforma web interna para filiais (API REST em C# com front-end em JavaScript), robôs de RPA fiscal, monitoramento com alertas automáticos e um app Flutter que funciona offline. Hoje desenvolvo ferramentas que cruzam sistemas e planilhas para eliminar conferência manual.</p>
+
+
+
+  <section id="projetos">
+    <div class="wrap">
+      <div class="head">
+        <h2>Projetos</h2>
+        <p class="sub">Sistemas que construí em empresas e em projetos próprios.</p>
       </div>
-      <div class="stats">
-        <div class="stat"><b>28</b><span>certificados, 252 horas de estudo</span></div>
-        <div class="stat"><b>ADS</b><span>Tecnólogo em Análise e Desenvolvimento de Sistemas, Uniasselvi</span></div>
-        <div class="stat"><b>AI-102</b><span>Formação em engenharia de IA no Azure</span></div>
-        <div class="stat"><b>Fluig</b><span>Workflows integrados ao ERP TOTVS</span></div>
+      <div class="projects">
+        <article class="project feature media">
+          <a class="shot" href="https://weslley-larroza.github.io/-Logiplan-demo/"><img src="assets/img/logiplan.jpg" width="1600" height="1180" alt="Tela do LogiPlan Pro com o resumo de ocupação, a carga em 3D e a lista de itens" loading="lazy"></a>
+          <div class="body"><div class="p-tags"><span class="p-tag">Operação</span><span class="p-tag">Web</span><span class="p-tag">3D</span><span class="p-tag state">Demo ao vivo</span></div><h3>LogiPlan Pro</h3><p>Simulador de carregamento e cubagem. Recebe a lista de itens, calcula pilhas, peso e ocupação do veículo ou armazém e mostra a carga em 3D, com aviso de excesso de peso.</p><p class="p-tech">JavaScript, Plotly.js, Bootstrap</p><p class="p-links"><a href="https://weslley-larroza.github.io/-Logiplan-demo/">Abrir demo</a><a href="https://github.com/weslley-larroza/-Logiplan-demo">Código</a></p></div>
+        </article>
+        <article class="project">
+          <div class="p-tags"><span class="p-tag">Administrativo</span><span class="p-tag">Sistema web</span><span class="p-tag state">Em desenvolvimento</span></div>
+          <h3>Plataforma web interna para filiais</h3>
+          <p>Sistema web para uso interno da Soollar, desenvolvido em conjunto com a equipe da matriz. API REST em C# com front-end em HTML, CSS e JavaScript e integração com SQL Server. Deploy previsto nas filiais.</p>
+          <p class="p-tech">C# / .NET, JavaScript, SQL Server</p>
+        </article>
+        <article class="project">
+          <div class="p-tags"><span class="p-tag">Financeiro e fiscal</span><span class="p-tag">RPA</span><span class="p-tag state">Em produção</span></div>
+          <h3>Automação fiscal (RPA)</h3>
+          <p>Valida e transmite documentos fiscais em sistemas do governo, confere a tela por visão computacional para evitar falso positivo e avisa a equipe quando algo falha. Tirou do manual um processo que levava horas por lote. O código público é uma versão de demonstração, sem dados da empresa.</p>
+          <p class="p-tech">Python, Playwright, OpenCV, Supabase</p><p class="p-links"><a href="https://github.com/weslley-larroza/FCI-Automation-Suite">Código</a></p>
+        </article>
+        <article class="project">
+          <div class="p-tags"><span class="p-tag">Backend</span><span class="p-tag">Financeiro</span><span class="p-tag state">Desafio técnico</span></div>
+          <h3>Processador de transações distribuído</h3>
+          <p>Serviço que processa transações financeiras vindas de vários provedores por HTTP e fila. Continua correto com mensagens duplicadas, fora de ordem e várias instâncias rodando ao mesmo tempo.</p>
+          <p class="p-tech">TypeScript, NestJS, PostgreSQL, SQS, Docker</p><p class="p-links"><a href="https://github.com/weslley-larroza/Technical-Challenge---Distributed-Wagering-Processor">Código</a></p>
+        </article>
+        <article class="project">
+          <div class="p-tags"><span class="p-tag">Operação</span><span class="p-tag">Automação de dados</span><span class="p-tag state">Em produção</span></div>
+          <h3>Rastreamento automático de entregas</h3>
+          <p>Consulta o status de entrega das notas fiscais nos portais de várias transportadoras e consolida tudo numa planilha do Google Sheets. O que não é encontrado vai para uma fila de conferência.</p>
+          <p class="p-tech">Python, Selenium, Google Sheets API</p>
+        </article>
+        <article class="project feature media">
+          <a class="shot" href="https://github.com/weslley-larroza/eve-trade-circuit"><img src="assets/img/eve-trade-circuit.jpg" width="1302" height="627" alt="Tela do planejador de circuito mostrando a melhor ordem de rota e os itens de cada trecho" loading="lazy"></a>
+          <div class="body"><div class="p-tags"><span class="p-tag">Algoritmos</span><span class="p-tag">Web</span><span class="p-tag state">Projeto pessoal</span></div><h3>Arbitragem de mercado no EVE Online</h3><p>Projeto pessoal sobre o jogo EVE Online. Consome a API oficial com login OAuth, cruza o livro de ofertas de 5 mercados e resolve um problema de otimização: qual carga e qual ordem de rota dão mais lucro por volume.</p><p class="p-tech">Python, API REST, OAuth</p><p class="p-links"><a href="https://github.com/weslley-larroza/eve-trade-circuit">Código</a></p></div>
+        </article>
+      </div>
+      <h3 class="more-title">Outros projetos</h3>
+      <ul class="more">
+        <li><a href="https://github.com/weslley-larroza/App-android-update-fotos">App de fotos de pedidos</a>Flutter, em uso pela equipe de expedição. Funciona offline e reenvia quando a conexão volta.</li>
+        <li><a href="https://github.com/weslley-larroza/monitor_armazenamento">Monitor de armazenamento</a>App Flutter que envia o uso de armazenamento de vários aparelhos para um servidor.</li>
+        <li><a href="https://github.com/weslley-larroza/Tradutor-de-Artigos-T-cnicos-com-AzureAI">Tradutor de artigos técnicos</a>Python com Azure OpenAI, mantendo o contexto técnico do texto.</li>
+        <li><a href="https://github.com/weslley-larroza/An-lise-de-Documentos-Anti-fraude-com-AzureA">API antifraude</a>Pontua o risco de fraude de transações, com documentação da API.</li>
+        <li><a href="https://github.com/weslley-larroza/Etiqueta-NF-Printer">Etiqueta NF Printer</a>App desktop em Python para imprimir etiquetas de notas fiscais.</li>
+        <li><a href="https://github.com/weslley-larroza/CONEXAO-REMOTA">Conexão Remota</a>Organiza acessos RDP a vários servidores a partir de um JSON.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="wrap">
+      <div class="head">
+        <h2>Trajetória</h2>
+        <p class="sub">Mais de 3 anos de experiência unindo infraestrutura de TI e desenvolvimento de software.</p>
+      </div>
+      <div class="about">
+        <div class="prose">
+          <p>Comecei na infraestrutura de TI e passei para o desenvolvimento resolvendo os problemas que via no dia a dia das equipes.</p>
+          <p>Na Soollar, era o único técnico de TI da filial, cuidando de servidores, redes, Active Directory, telefonia e suporte. Isso me ensinou a entender o que acontece por trás de um sistema, não só a camada de código.</p>
+          <p>Ao mesmo tempo, passei a desenvolver junto com a equipe da matriz: automação fiscal com RPA, monitoramento com alertas automáticos, um app Flutter usado pela expedição e uma plataforma web interna em C#. Hoje busco uma posição dedicada em desenvolvimento e sigo construindo projetos próprios.</p>
+        </div>
+        <ol class="timeline">
+          <li>
+            <span class="when">05/2023 – 09/2026</span>
+            <h3>Assistente de TI e desenvolvimento</h3>
+            <p class="org">Soollar Distribuidora, Itajaí</p>
+            <p>Único técnico de TI da filial e desenvolvimento com a equipe da matriz: RPA fiscal, monitoramento, app Flutter e plataforma web em C#.</p>
+          </li>
+          <li>
+            <span class="when">2023 – 2025</span>
+            <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+            <p class="org">Uniasselvi</p>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
 
-  <section id="areas">
+  <section id="areas" class="alt">
     <div class="wrap">
       <div class="head">
         <h2>Onde eu ajudo</h2>
@@ -306,72 +426,25 @@
     </div>
   </section>
 
-  <section id="projetos" class="alt">
-    <div class="wrap">
-      <div class="head">
-        <h2>Projetos</h2>
-        <p class="sub">Sistemas e automações que construí, a maioria em uso por equipes de verdade.</p>
-      </div>
-      <div class="projects">
-        <article class="project feature media">
-          <a class="shot" href="https://weslley-larroza.github.io/-Logiplan-demo/"><img src="assets/img/logiplan.jpg" width="1600" height="1180" alt="Tela do LogiPlan Pro com o resumo de ocupação, a carga em 3D e a lista de itens" loading="lazy"></a>
-          <div class="body"><div class="p-tags"><span class="p-tag">Operação</span><span class="p-tag">Web</span><span class="p-tag">3D</span><span class="p-tag state">Demo ao vivo</span></div><h3>LogiPlan Pro</h3><p>Simulador de carregamento e cubagem. Recebe a lista de itens, calcula pilhas, peso e ocupação do veículo ou armazém e mostra a carga em 3D, com aviso de excesso de peso.</p><p class="p-tech">JavaScript, Plotly.js, Bootstrap</p><p class="p-links"><a href="https://weslley-larroza.github.io/-Logiplan-demo/">Abrir demo</a><a href="https://github.com/weslley-larroza/-Logiplan-demo">Código</a></p></div>
-        </article>
-        <article class="project feature">
-          <div><div class="p-tags"><span class="p-tag">Administrativo</span><span class="p-tag">Sistema web</span><span class="p-tag state">Em produção</span></div><h3>Plataforma web interna para filiais</h3></div>
-          <div><p>Sistema usado pelas filiais de uma distribuidora para centralizar rotinas que antes corriam por e-mail e planilha. API REST em C# com front-end em JavaScript, relatórios em SQL Server e monitoramento com alertas por e-mail e Slack.</p><p class="p-tech">C# / .NET, JavaScript, SQL Server</p></div>
-        </article>
-        <article class="project">
-          <div class="p-tags"><span class="p-tag">Fiscal</span><span class="p-tag">RPA</span><span class="p-tag state">Em produção</span></div>
-          <h3>Robô de RPA fiscal</h3>
-          <p>Valida e transmite documentos fiscais em sistemas do governo, confere a tela por visão computacional para evitar falso positivo e avisa a equipe quando algo falha. O repositório é uma versão de demonstração reescrita do zero.</p>
-          <p class="p-tech">Python, Playwright, OpenCV, Supabase</p><p class="p-links"><a href="https://github.com/weslley-larroza/FCI-Automation-Suite">Código</a></p>
-        </article>
-        <article class="project">
-          <div class="p-tags"><span class="p-tag">Backend</span><span class="p-tag">Financeiro</span><span class="p-tag state">Desafio técnico</span></div>
-          <h3>Processador de transações distribuído</h3>
-          <p>Serviço que processa transações financeiras vindas de vários provedores por HTTP e fila. Continua correto com mensagens duplicadas, fora de ordem e várias instâncias rodando ao mesmo tempo.</p>
-          <p class="p-tech">TypeScript, NestJS, PostgreSQL, SQS, Docker</p><p class="p-links"><a href="https://github.com/weslley-larroza/Technical-Challenge---Distributed-Wagering-Processor">Código</a></p>
-        </article>
-        <article class="project">
-          <div class="p-tags"><span class="p-tag">Operação</span><span class="p-tag">Integração</span><span class="p-tag state">Em desenvolvimento</span></div>
-          <h3>Conciliação de sistema e planilhas</h3>
-          <p>Cruza os registros de um sistema de gestão com as planilhas da equipe, aponta divergências e mantém tudo sincronizado, sem conferência manual.</p>
-          <p class="p-tech">Python, Excel, JavaScript</p>
-        </article>
-        <article class="project">
-          <div class="p-tags"><span class="p-tag">Operação</span><span class="p-tag">Automação de dados</span><span class="p-tag state">Em produção</span></div>
-          <h3>Rastreamento automático de entregas</h3>
-          <p>Consulta o status de notas fiscais em portais de várias transportadoras, cada uma com seu captcha, e grava os resultados no Google Sheets.</p>
-          <p class="p-tech">Python, Selenium, Google Sheets API</p>
-        </article>
-        <article class="project feature media">
-          <a class="shot" href="https://github.com/weslley-larroza/eve-trade-circuit"><img src="assets/img/eve-trade-circuit.jpg" width="1302" height="627" alt="Tela do planejador de circuito mostrando a melhor ordem de rota e os itens de cada trecho" loading="lazy"></a>
-          <div class="body"><div class="p-tags"><span class="p-tag">Algoritmos</span><span class="p-tag">Web</span><span class="p-tag state">Projeto pessoal</span></div><h3>Otimizador de rotas e carga</h3><p>Ferramenta de arbitragem de mercado para o jogo EVE Online. Lê a API oficial, encontra as melhores oportunidades de compra e venda e monta a rota e o carregamento que dão mais lucro por volume.</p><p class="p-tech">Python, API REST, OAuth</p><p class="p-links"><a href="https://github.com/weslley-larroza/eve-trade-circuit">Código</a></p></div>
-        </article>
-      </div>
-      <h3 class="more-title">Outros repositórios públicos</h3>
-      <ul class="more">
-        <li><a href="https://github.com/weslley-larroza/App-android-update-fotos">App de fotos de pedidos</a>Flutter, funciona offline e reenvia quando a conexão volta.</li>
-        <li><a href="https://github.com/weslley-larroza/monitor_armazenamento">Monitor de armazenamento</a>App Flutter que envia o uso de armazenamento de vários aparelhos para um servidor.</li>
-        <li><a href="https://github.com/weslley-larroza/Tradutor-de-Artigos-T-cnicos-com-AzureAI">Tradutor de artigos técnicos</a>Python com Azure OpenAI, mantendo o contexto técnico do texto.</li>
-        <li><a href="https://github.com/weslley-larroza/An-lise-de-Documentos-Anti-fraude-com-AzureA">API antifraude</a>Pontua o risco de fraude de transações, com documentação da API.</li>
-        <li><a href="https://github.com/weslley-larroza/Etiqueta-NF-Printer">Etiqueta NF Printer</a>App desktop em Python para imprimir etiquetas de notas fiscais.</li>
-        <li><a href="https://github.com/weslley-larroza/CONEXAO-REMOTA">Conexão Remota</a>Organiza acessos RDP a vários servidores a partir de um JSON.</li>
-      </ul>
-    </div>
-  </section>
-
   <section id="stack">
     <div class="wrap">
       <div class="head"><h2>Tecnologias</h2></div>
-      <div class="stack">
-        <div><h3>Backend e APIs</h3><ul class="chips"><li>C# / .NET</li><li>Python</li><li>FastAPI</li><li>Flask</li><li>Java (fundamentos)</li></ul></div>
-        <div><h3>Front-end e mobile</h3><ul class="chips"><li>JavaScript</li><li>TypeScript</li><li>HTML e CSS</li><li>Flutter / Dart</li></ul></div>
-        <div><h3>Automação</h3><ul class="chips"><li>Playwright</li><li>Selenium</li><li>PyAutoGUI</li><li>OpenCV</li><li>N8N</li></ul></div>
-        <div><h3>Dados</h3><ul class="chips"><li>SQL Server</li><li>PostgreSQL</li><li>Supabase</li><li>SQLite</li><li>MySQL</li><li>MongoDB</li></ul></div>
-        <div><h3>Infra e entrega</h3><ul class="chips"><li>Linux</li><li>Git e GitHub Actions</li><li>Docker</li><li>AWS</li><li>Redes e AD</li></ul></div>
-        <div><h3>Plataformas e IA</h3><ul class="chips"><li>TOTVS Fluig</li><li>Azure AI</li><li>Azure OpenAI</li><li>Scrum</li><li>Figma</li></ul></div>
+      <div class="stack-group">
+        <h3>No dia a dia</h3>
+        <p>O que uso nos sistemas e automações em produção.</p>
+        <div class="stack" translate="no">
+          <div><h3>Backend</h3><ul class="chips"><li>C# / .NET</li><li>Python</li><li>API REST</li></ul></div>
+          <div><h3>Front-end e mobile</h3><ul class="chips"><li>JavaScript</li><li>HTML e CSS</li><li>Flutter / Dart</li></ul></div>
+          <div><h3>Automação</h3><ul class="chips"><li>Playwright</li><li>Selenium</li><li>OpenCV</li></ul></div>
+          <div><h3>Dados</h3><ul class="chips"><li>SQL Server</li><li>PostgreSQL</li><li>Supabase</li><li>Google Sheets API</li></ul></div>
+          <div><h3>Entrega</h3><ul class="chips"><li>Git</li><li>GitHub Actions</li><li>Linux</li></ul></div>
+          <div><h3>Plataformas</h3><ul class="chips"><li>TOTVS Fluig</li></ul></div>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3>Já trabalhei com</h3>
+        <p>Usadas em projetos pessoais, desafios técnicos e cursos.</p>
+        <ul class="chips soft" translate="no"><li>TypeScript</li><li>NestJS</li><li>FastAPI</li><li>Flask</li><li>Docker</li><li>AWS</li><li>Azure AI</li><li>Azure OpenAI</li><li>N8N</li><li>PyAutoGUI</li><li>SQLite</li><li>MySQL</li><li>MongoDB</li><li>Plotly.js</li></ul>
       </div>
     </div>
   </section>
@@ -379,37 +452,39 @@
   <section id="certificados" class="alt">
     <div class="wrap">
       <div class="head">
-        <h2>Certificados</h2>
-        <p class="sub">28 certificados e 252 horas de estudo. Clique em qualquer um para abrir o PDF.</p>
+        <h2>Formação</h2>
+        <p class="sub">Graduação em ADS e estudo contínuo, principalmente em IA no Azure, Python e plataformas corporativas.</p>
       </div>
       <div class="cert-highlights">
-        <a class="ch" href="certificados/ai-102-certification.pdf" target="_blank" rel="noopener"><b>30h</b><span>Formação AI-102: engenharia de IA no Azure</span><small>nov/2025</small></a>
+        <div class="ch static"><b>ADS</b><span>Tecnólogo em Análise e Desenvolvimento de Sistemas</span><small>Uniasselvi, 2023 a 2025</small></div>
         <a class="ch" href="certificados/fluig-avancado.pdf" target="_blank" rel="noopener"><b>40h</b><span>Fluig avançado: workflows integrados ao ERP</span><small>jul/2026</small></a>
+        <a class="ch" href="certificados/ai-102-certification.pdf" target="_blank" rel="noopener"><b>30h</b><span>Trilha preparatória AI-102: IA no Azure</span><small>nov/2025</small></a>
         <a class="ch" href="certificados/python-fundamentals.pdf" target="_blank" rel="noopener"><b>26h</b><span>Formação Python Fundamentals</span><small>ago/2025</small></a>
-        <a class="ch" href="certificados/azure-ai-fundamentals-ai-900.pdf" target="_blank" rel="noopener"><b>15h</b><span>Azure AI Fundamentals (AI-900)</span><small>jul/2025</small></a>
       </div>
-      <div class="filters" role="group" aria-label="Filtrar certificados">
-        <button type="button" data-f="all" aria-pressed="true">Todos</button>
-        <button type="button" data-f="ia" aria-pressed="false">IA e Azure</button>
-        <button type="button" data-f="dev" aria-pressed="false">Desenvolvimento</button>
-        <button type="button" data-f="dados" aria-pressed="false">Dados</button>
-        <button type="button" data-f="infra" aria-pressed="false">Infra e segurança</button>
-      </div>
-      <ul class="cert-list" id="cert-list">
+      <details class="all-certs">
+        <summary>Ver todos os 28 cursos (252 horas)</summary>
+        <div class="filters" role="group" aria-label="Filtrar cursos">
+          <button type="button" data-f="all" aria-pressed="true">Todos</button>
+          <button type="button" data-f="ia" aria-pressed="false">IA e Azure</button>
+          <button type="button" data-f="dev" aria-pressed="false">Desenvolvimento</button>
+          <button type="button" data-f="dados" aria-pressed="false">Dados</button>
+          <button type="button" data-f="infra" aria-pressed="false">Infra e segurança</button>
+        </div>
+        <ul class="cert-list" id="cert-list">
         <li data-area="dev"><span>Fluig Avançado: workflows integrados ao ERP</span><span class="meta">40h, jul/2026</span><a href="certificados/fluig-avancado.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Fluig Avançado: workflows integrados ao ERP">Ver PDF</a></li>
-        <li data-area="ia"><span>Formação AI-102 Certification</span><span class="meta">30h, nov/2025</span><a href="certificados/ai-102-certification.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Formação AI-102 Certification">Ver PDF</a></li>
+        <li data-area="ia"><span>Trilha preparatória AI-102 (Azure AI Engineer)</span><span class="meta">30h, nov/2025</span><a href="certificados/ai-102-certification.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Trilha preparatória AI-102 (Azure AI Engineer)">Ver PDF</a></li>
         <li data-area="ia"><span>Desenvolvendo Soluções de Processamento de Linguagem Natural</span><span class="meta">8h, nov/2025</span><a href="certificados/solucoes-processamento-linguagem-natural.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Desenvolvendo Soluções de Processamento de Linguagem Natural">Ver PDF</a></li>
         <li data-area="ia"><span>Soluções de IA Generativa com o Azure OpenAI</span><span class="meta">5h, nov/2025</span><a href="certificados/ia-generativa-azure-openai.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Soluções de IA Generativa com o Azure OpenAI">Ver PDF</a></li>
         <li data-area="ia"><span>Soluções com a IA do Azure para Informação de Documentos</span><span class="meta">4h, nov/2025</span><a href="certificados/azure-ia-informacao-documentos.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Soluções com a IA do Azure para Informação de Documentos">Ver PDF</a></li>
         <li data-area="dev"><span>Formação Python Fundamentals</span><span class="meta">26h, ago/2025</span><a href="certificados/python-fundamentals.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Formação Python Fundamentals">Ver PDF</a></li>
-        <li data-area="ia"><span>Formação Microsoft Azure AI Fundamentals (AI-900)</span><span class="meta">15h, jul/2025</span><a href="certificados/azure-ai-fundamentals-ai-900.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Formação Microsoft Azure AI Fundamentals (AI-900)">Ver PDF</a></li>
+        <li data-area="ia"><span>Trilha preparatória AI-900 (Azure AI Fundamentals)</span><span class="meta">15h, jul/2025</span><a href="certificados/azure-ai-fundamentals-ai-900.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Trilha preparatória AI-900 (Azure AI Fundamentals)">Ver PDF</a></li>
         <li data-area="ia"><span>Aceleração Microsoft AI Agents</span><span class="meta">4h, jul/2025</span><a href="certificados/aceleracao-microsoft-ai-agents.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Aceleração Microsoft AI Agents">Ver PDF</a></li>
-        <li data-area="ia"><span>Skills Certification: Microsoft AI Agents</span><span class="meta">1h, jul/2025</span><a href="certificados/skills-microsoft-ai-agents.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Skills Certification: Microsoft AI Agents">Ver PDF</a></li>
+        <li data-area="ia"><span>Microsoft AI Agents (módulo de habilidades)</span><span class="meta">1h, jul/2025</span><a href="certificados/skills-microsoft-ai-agents.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Microsoft AI Agents (módulo de habilidades)">Ver PDF</a></li>
         <li data-area="ia"><span>Formação Fundamentos de Inteligência Artificial</span><span class="meta">10h, jul/2025</span><a href="certificados/fundamentos-inteligencia-artificial.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Formação Fundamentos de Inteligência Artificial">Ver PDF</a></li>
         <li data-area="ia"><span>Fundamentos da IA Generativa</span><span class="meta">1h, jul/2025</span><a href="certificados/fundamentos-ia-generativa.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Fundamentos da IA Generativa">Ver PDF</a></li>
         <li data-area="dev"><span>Linguagem de Programação Dart</span><span class="meta">11h, jul/2025</span><a href="certificados/linguagem-dart.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Linguagem de Programação Dart">Ver PDF</a></li>
         <li data-area="dev"><span>Consumindo APIs com Flutter</span><span class="meta">11h, jul/2025</span><a href="certificados/consumindo-apis-flutter.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Consumindo APIs com Flutter">Ver PDF</a></li>
-        <li data-area="dev"><span>Formação GitHub Certification</span><span class="meta">10h, jul/2025</span><a href="certificados/github-certification.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Formação GitHub Certification">Ver PDF</a></li>
+        <li data-area="dev"><span>Trilha preparatória para certificação GitHub</span><span class="meta">10h, jul/2025</span><a href="certificados/github-certification.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Trilha preparatória para certificação GitHub">Ver PDF</a></li>
         <li data-area="dados"><span>Persistência de Dados com SQLite</span><span class="meta">7h, jul/2025</span><a href="certificados/persistencia-sqlite.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Persistência de Dados com SQLite">Ver PDF</a></li>
         <li data-area="dados"><span>Armazenando Dados com Hive</span><span class="meta">2h, jul/2025</span><a href="certificados/banco-de-dados-hive.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Armazenando Dados com Hive">Ver PDF</a></li>
         <li data-area="dev"><span>Scrum Fundamentals</span><span class="meta">4h, jul/2025</span><a href="certificados/scrum-fundamentals.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Scrum Fundamentals">Ver PDF</a></li>
@@ -424,8 +499,9 @@
         <li data-area="infra"><span>Gerenciando Usuários no Linux</span><span class="meta">2h, abr/2023</span><a href="certificados/linux-gerenciando-usuarios.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Gerenciando Usuários no Linux">Ver PDF</a></li>
         <li data-area="infra"><span>Gerenciamento de Pacotes Linux</span><span class="meta">1h, abr/2023</span><a href="certificados/linux-gerenciamento-pacotes.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Gerenciamento de Pacotes Linux">Ver PDF</a></li>
         <li data-area="dev"><span>Introdução à Qualidade de Software</span><span class="meta">2h, nov/2021</span><a href="certificados/qualidade-de-software.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Introdução à Qualidade de Software">Ver PDF</a></li>
-      </ul>
-      <p class="cert-foot">A maioria pela DIO (Digital Innovation One), incluindo trilhas patrocinadas pela Microsoft.</p>
+        </ul>
+        <p class="cert-foot">A maioria pela DIO (Digital Innovation One), em trilhas preparatórias. Não são os exames oficiais da Microsoft ou do GitHub.</p>
+      </details>
     </div>
   </section>
 
@@ -434,15 +510,13 @@
       <div>
         <h2>Vamos conversar?</h2>
         <p>Procurando alguém para o seu time, ou tem um processo que toma horas da equipe toda semana? Em 20 minutos de conversa dá para saber se vale automatizar.</p>
-        <p class="phone">WhatsApp: <a href="https://wa.me/5547992314420?text=Ol%C3%A1%20Weslley%2C%20vi%20seu%20site%20e%20gostaria%20de%20conversar.">(47) 99231-4420</a></p>
+        <p class="phone"><a href="mailto:weslleylarroza@outlook.com">weslleylarroza@outlook.com</a><br>WhatsApp: <a href="https://wa.me/5547992314420?text=Ol%C3%A1%20Weslley%2C%20vi%20seu%20site%20e%20gostaria%20de%20conversar.">(47) 99231-4420</a></p>
       </div>
       <div class="actions">
         <a class="btn primary" href="https://wa.me/5547992314420?text=Ol%C3%A1%20Weslley%2C%20vi%20seu%20site%20e%20gostaria%20de%20conversar.">Chamar no WhatsApp</a>
         <a class="btn" href="https://www.linkedin.com/in/weslley-larroza-b8bb57213">LinkedIn</a>
-        <!-- Quando tiver o e-mail do domínio, descomente:
-        <a class="btn" href="mailto:contato@weslleylarroza.com.br">Mandar e-mail</a>
-        -->
-        <a class="btn" href="cv/Weslley-Larroza-CV.pdf">Baixar CV</a>
+        <a class="btn" href="mailto:weslleylarroza@outlook.com?subject=Contato%20pelo%20site">Mandar e-mail</a>
+        <a class="btn" href="cv/Weslley-Larroza-CV.pdf" download>Baixar CV</a>
         <a class="btn" href="https://github.com/weslley-larroza">GitHub</a>
       </div>
     </div>
@@ -451,19 +525,23 @@
 
 <footer>
   <div class="wrap">
-    <span>Weslley Larroza, Itajaí, SC. 2026.</span>
+    <span>© 2026 Weslley Larroza. Itajaí, SC.</span>
     <a href="https://github.com/weslley-larroza/portfolio">Código deste site</a>
   </div>
 </footer>
 
+<a class="wa-float" href="https://wa.me/5547992314420?text=Ol%C3%A1%20Weslley%2C%20vi%20seu%20site%20e%20gostaria%20de%20conversar." aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>WhatsApp</a>
+
 <script>
-  const FLOWS = {"adm": {"antes": {"t": "Relatório semanal da gestão", "time": "≈ 4 horas por semana", "s": ["Exportar dados de dois sistemas diferentes", "Colar tudo numa planilha e ajustar colunas na mão", "Montar gráficos e mandar por e-mail para cada gestor"]}, "depois": {"t": "Relatório semanal da gestão", "time": "Pronto toda segunda às 8h", "s": ["Os dados são lidos direto dos sistemas", "A planilha e os gráficos são gerados sozinhos", "Cada gestor recebe o seu por e-mail ou Slack"]}}, "fin": {"antes": {"t": "Envio de documentos fiscais", "time": "Horas de conferência por dia", "s": ["Abrir cada documento no portal do governo", "Conferir status tela por tela", "Reenviar o que falhou e anotar numa planilha"]}, "depois": {"t": "Envio de documentos fiscais", "time": "A equipe só trata as exceções", "s": ["Um robô valida e transmite cada documento", "O retorno de cada protocolo é gravado no banco", "Falhas geram alerta automático com o motivo"]}}, "ops": {"antes": {"t": "Conferência de pedidos", "time": "Retrabalho todo dia", "s": ["Comparar o sistema com a planilha da equipe linha a linha", "Procurar divergências no olho", "Atualizar várias planilhas compartilhadas"]}, "depois": {"t": "Conferência de pedidos", "time": "Divergências apontadas na hora", "s": ["Sistema e planilhas cruzados automaticamente", "Diferenças destacadas antes de virar problema", "Planilhas compartilhadas sempre sincronizadas"]}}};
+  const FLOWS = {"adm": {"antes": {"t": "Controle de pendências", "time": "Checagem manual todo dia", "s": ["Abrir o sistema e filtrar as pendências", "Conferir uma a uma no banco de dados", "Avisar cada responsável por mensagem"]}, "depois": {"t": "Controle de pendências", "time": "Alertas automáticos, sem checagem manual", "s": ["Um robô consulta as bases em ciclos", "As pendências viram um único alerta consolidado", "A equipe recebe por e-mail e Slack"]}}, "fin": {"antes": {"t": "Envio de documentos fiscais", "time": "Horas de trabalho manual por lote", "s": ["Gerar e validar cada documento à mão", "Transmitir no sistema do governo tela por tela", "Voltar depois para conferir os retornos"]}, "depois": {"t": "Envio de documentos fiscais", "time": "Roda sozinho, em segundo plano", "s": ["Um robô gera, valida e transmite os documentos", "Os retornos são consultados automaticamente", "Falhas geram alerta com o motivo"]}}, "ops": {"antes": {"t": "Fotos dos pedidos", "time": "Fotos espalhadas e perdidas", "s": ["Fotos tiradas no celular de cada um", "Enviadas por mensagem, sem padrão", "Difícil achar a foto de um pedido depois"]}, "depois": {"t": "Fotos dos pedidos", "time": "Em uso pela equipe de expedição", "s": ["App vincula cada foto ao número do pedido", "Imagem redimensionada automaticamente", "Sem internet, guarda e reenvia depois"]}}};
   const flow = document.getElementById('flow');
   const body = document.getElementById('flow-body');
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const status = document.getElementById('flow-status');
   let area = Object.keys(FLOWS)[0], mode = 'antes', timers = [];
   function clearTimers(){ timers.forEach(clearTimeout); timers = []; }
   function setPressed(m){ flow.querySelectorAll('.toggle button').forEach(x => x.setAttribute('aria-pressed', x.dataset.mode === m)); }
+  function announce(){ const d = FLOWS[area][mode]; status.textContent = (mode === 'antes' ? 'Antes: ' : 'Depois: ') + d.t + ', ' + d.time + '.'; }
   function render(stagger){
     const d = FLOWS[area][mode];
     flow.dataset.mode = mode;
@@ -473,14 +551,27 @@
     body.classList.remove('swap'); void body.offsetWidth; body.classList.add('swap');
     if (stagger) body.querySelectorAll('.steps li').forEach((li, i) => timers.push(setTimeout(() => li.classList.add('done'), 450 + i * 420)));
   }
-  flow.querySelectorAll('.areas button').forEach(b => b.addEventListener('click', () => {
+  const tabs = [...flow.querySelectorAll('.areas button')];
+  function selectTab(b, focus){
     clearTimers(); area = b.dataset.area;
-    flow.querySelectorAll('.areas button').forEach(x => x.setAttribute('aria-selected', x === b));
-    render(false);
-  }));
+    tabs.forEach(x => { const on = x === b; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; });
+    document.getElementById('flow-panel').setAttribute('aria-labelledby', b.id);
+    if (focus) b.focus();
+    render(false); announce();
+  }
+  tabs.forEach((b, i) => {
+    b.tabIndex = i === 0 ? 0 : -1;
+    b.addEventListener('click', () => selectTab(b, false));
+    b.addEventListener('keydown', e => {
+      const k = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+      if (k) { e.preventDefault(); selectTab(tabs[(i + k + tabs.length) % tabs.length], true); }
+      if (e.key === 'Home') { e.preventDefault(); selectTab(tabs[0], true); }
+      if (e.key === 'End') { e.preventDefault(); selectTab(tabs[tabs.length - 1], true); }
+    });
+  });
   flow.querySelectorAll('.toggle button').forEach(b => b.addEventListener('click', () => {
     clearTimers(); mode = b.dataset.mode; setPressed(mode);
-    render(mode === 'depois' && !reduce);
+    render(mode === 'depois' && !reduce); announce();
   }));
   render(false);
   // Uma única demonstração ao abrir a página: o processo manual vira automático.
