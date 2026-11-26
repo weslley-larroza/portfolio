@@ -9,7 +9,10 @@ Página estática (HTML/CSS puro, sem build), publicada em https://weslleylarroz
 | --- | --- |
 | `index.html` | O site inteiro (estilos inclusos) |
 | `cv/Weslley-Larroza-CV.pdf` | Currículo baixado pelos botões "Baixar CV" (adicionar) |
-| `certificados/` | PDFs dos certificados listados na seção Certificados |
+| `certificados/` | PDFs dos cursos listados na seção Formação |
+| `assets/img/` | Prints dos projetos e `og.png` (prévia de link 1200×630) |
+| `assets/fonts/` | Fontes hospedadas no próprio site (Bricolage Grotesque e Instrument Sans, licença OFL) |
+| `robots.txt`, `sitemap.xml` | Indexação no Google |
 | `.htaccess` | Força HTTPS, bloqueia listagem de pastas, cache |
 | `.github/workflows/deploy-hostinger.yml` | Deploy automático por FTP a cada push na `main` |
 
