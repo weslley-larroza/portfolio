@@ -9,6 +9,7 @@ Página estática (HTML/CSS puro, sem build), publicada em https://weslleylarroz
 | --- | --- |
 | `index.html` | O site inteiro (estilos inclusos) |
 | `cv/Weslley-Larroza-CV.pdf` | Currículo baixado pelos botões "Baixar CV" (adicionar) |
+| `certificados/` | PDFs dos certificados listados na seção Certificados |
 | `.htaccess` | Força HTTPS, bloqueia listagem de pastas, cache |
 | `.github/workflows/deploy-hostinger.yml` | Deploy automático por FTP a cada push na `main` |
 
@@ -38,5 +39,12 @@ O GitHub Pages foi desativado: desligue em Settings > Pages para não ficar com 
 ## Pendências
 
 - [ ] Adicionar o PDF do currículo em `cv/`
-- [ ] Descomentar e preencher e-mail / WhatsApp na seção Contato
+- [ ] Criar o e-mail do domínio e descomentar o botão na seção Contato
 - [ ] Atualizar o LinkedIn com o cargo atual
+
+## Adicionar um certificado
+
+1. Copie o PDF para `certificados/` com um nome curto (ex.: `docker-fundamentos.pdf`).
+2. No `index.html`, duplique uma linha `<li data-area="...">` da lista `cert-list` e ajuste nome, horas, data e link.
+   Áreas: `ia`, `dev`, `dados`, `infra`.
+3. Atualize o total de certificados e horas no texto da seção.

@@ -3,201 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weslley Larroza, desenvolvedor full stack e automação</title>
-<meta name="description" content="Weslley Larroza, desenvolvedor full stack em Itajaí, SC. APIs, automações e integrações com C#/.NET, Python, JavaScript e Flutter para operações e logística.">
+<title>Weslley Larroza, desenvolvedor full stack e automação de processos</title>
+<meta name="description" content="Weslley Larroza, desenvolvedor full stack. Automatizo processos e conecto sistemas para áreas administrativas, financeiras, comerciais e de operação. C#/.NET, Python, JavaScript e Flutter.">
 <meta name="author" content="Weslley Larroza">
 <link rel="canonical" href="https://weslleylarroza.com.br/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://weslleylarroza.com.br/">
-<meta property="og:title" content="Weslley Larroza, desenvolvedor full stack e automação">
-<meta property="og:description" content="APIs, automações e integrações que tiram trabalho manual das operações.">
+<meta property="og:title" content="Weslley Larroza, desenvolvedor full stack e automação de processos">
+<meta property="og:description" content="Automatizo processos e conecto sistemas para empresas de qualquer área.">
 <meta property="og:locale" content="pt_BR">
-<meta name="theme-color" content="#0F2A44">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230F2A44'/%3E%3Crect y='0' width='32' height='7' fill='%23F2C12E'/%3E%3Ctext x='16' y='26' font-family='Arial' font-weight='900' font-size='15' fill='white' text-anchor='middle'%3EWL%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#14162B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233D4BE0'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='14' fill='white' text-anchor='middle'%3EWL%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --concreto:#E4E8EC;
-    --concreto-2:#D5DBE1;
-    --naval:#0F2A44;
-    --aco:#56677A;
-    --etiqueta:#FFFFFF;
-    --doca:#F2C12E;
-    --porto:#1D5FAF;
-    --linha:#BCC5CE;
-    --wrap:1080px;
+    --bg:#FFFFFF;
+    --surface:#F2F4F7;
+    --ink:#14162B;
+    --muted:#5D6275;
+    --line:#E1E4EA;
+    --accent:#3D4BE0;
+    --accent-ink:#2A35B8;
+    --lilac:#ECEBFF;
+    --ok:#12805C;
+    --warn:#B4541A;
+    --display:'Bricolage Grotesque', system-ui, sans-serif;
   }
   *{ margin:0; padding:0; box-sizing:border-box; }
   html{ scroll-behavior:smooth; }
-  body{
-    background:var(--concreto);
-    color:var(--naval);
-    font-family:'Archivo', system-ui, sans-serif;
-    font-size:17px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{ color:var(--porto); text-underline-offset:3px; text-decoration-thickness:1px; }
-  a:hover{ text-decoration-thickness:2px; }
-  :focus-visible{ outline:3px solid var(--doca); outline-offset:3px; border-radius:2px; }
-  .wrap{ max-width:var(--wrap); margin:0 auto; padding:0 28px; }
-  .skip{ position:absolute; left:-999px; top:8px; background:var(--naval); color:#fff; padding:8px 14px; z-index:50; }
+  body{ background:var(--bg); color:var(--ink); font-family:'Instrument Sans', system-ui, sans-serif; font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  a{ color:var(--accent); text-underline-offset:3px; }
+  :focus-visible{ outline:3px solid var(--accent); outline-offset:3px; border-radius:6px; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 28px; }
+  .skip{ position:absolute; left:-999px; top:8px; background:var(--ink); color:#fff; padding:8px 14px; z-index:50; border-radius:8px; }
   .skip:focus{ left:8px; }
 
-  /* nav */
-  .top{ border-bottom:1px solid var(--linha); }
-  .top .wrap{ display:flex; align-items:center; justify-content:space-between; height:64px; gap:24px; }
-  .brand{ font-weight:800; font-stretch:115%; font-size:17px; color:var(--naval); text-decoration:none; letter-spacing:-.01em; }
-  .top nav{ display:flex; gap:26px; font-size:15px; }
-  .top nav a{ color:var(--aco); text-decoration:none; }
-  .top nav a:hover{ color:var(--naval); }
-  .top nav a.cv{ color:var(--naval); font-weight:600; border-bottom:2px solid var(--doca); }
+  .top{ position:sticky; top:0; z-index:20; background:rgba(255,255,255,.86); backdrop-filter:saturate(1.4) blur(10px); border-bottom:1px solid var(--line); }
+  .top .wrap{ display:flex; align-items:center; justify-content:space-between; height:66px; gap:24px; }
+  .brand{ display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:700; font-size:18px; color:var(--ink); text-decoration:none; }
+  .brand i{ width:30px; height:30px; border-radius:9px; background:var(--accent); color:#fff; font-style:normal; font-size:12.5px; font-weight:800; display:grid; place-items:center; }
+  .top nav{ display:flex; align-items:center; gap:28px; font-size:15px; }
+  .top nav a{ color:var(--muted); text-decoration:none; }
+  .top nav a:hover{ color:var(--ink); }
+  .top nav a.cv{ color:#fff; background:var(--ink); padding:8px 16px; border-radius:999px; font-weight:600; }
+  .top nav a.cv:hover{ background:var(--accent); color:#fff; }
 
-  /* hero */
-  .hero{ padding:80px 0 96px; }
-  .hero .wrap{ display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
-  .hero h1{
-    font-size:clamp(46px, 7.4vw, 92px);
-    font-weight:900;
-    font-stretch:125%;
-    line-height:.92;
-    letter-spacing:-.035em;
-  }
-  .hero h1 span{ display:block; }
-  .lede{ margin-top:28px; font-size:22px; line-height:1.4; font-weight:500; max-width:30ch; }
-  .hero-sub{ margin-top:16px; color:var(--aco); max-width:52ch; }
+  .hero{ padding:84px 0 96px; }
+  .hero .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+  .hero h1{ font-family:var(--display); font-size:clamp(42px, 5.6vw, 70px); font-weight:700; line-height:1.02; letter-spacing:-.035em; font-variation-settings:"opsz" 96; }
+  .hero .lede{ margin-top:24px; font-size:19px; color:var(--muted); max-width:46ch; }
+  .who{ margin-top:28px; display:flex; align-items:center; gap:14px; font-size:15px; color:var(--muted); }
+  .who b{ display:block; color:var(--ink); font-size:16px; }
+  .avatar{ flex:none; width:46px; height:46px; border-radius:50%; background:linear-gradient(135deg,var(--accent),#8B7BFF); color:#fff; display:grid; place-items:center; font-weight:700; font-family:var(--display); }
   .actions{ margin-top:32px; display:flex; flex-wrap:wrap; gap:12px; }
-  .btn{
-    display:inline-flex; align-items:center; height:46px; padding:0 20px;
-    font-weight:650; font-size:15.5px; text-decoration:none;
-    border:2px solid var(--naval); color:var(--naval); border-radius:3px;
-  }
-  .btn:hover{ background:var(--etiqueta); }
-  .btn.primary{ background:var(--naval); color:#fff; }
-  .btn.primary:hover{ background:#1A3D60; }
+  .btn{ display:inline-flex; align-items:center; height:48px; padding:0 22px; border-radius:999px; font-weight:600; font-size:15.5px; text-decoration:none; border:1.5px solid var(--line); color:var(--ink); background:#fff; transition:border-color .15s, background .15s; }
+  .btn:hover{ border-color:var(--ink); }
+  .btn.primary{ background:var(--accent); border-color:var(--accent); color:#fff; }
+  .btn.primary:hover{ background:var(--accent-ink); border-color:var(--accent-ink); }
 
-  /* shipping label */
-  .label{
-    background:var(--etiqueta);
-    border:2px solid var(--naval);
-    border-radius:4px;
-    box-shadow:6px 6px 0 var(--naval);
-    transform:rotate(1.6deg);
-    font-stretch:88%;
-    animation:stamp .55s cubic-bezier(.2,.9,.3,1.2) .15s both;
-  }
-  @keyframes stamp{
-    from{ opacity:0; transform:rotate(-5deg) scale(1.08); box-shadow:0 0 0 var(--naval); }
-    to{ opacity:1; transform:rotate(1.6deg) scale(1); box-shadow:6px 6px 0 var(--naval); }
-  }
-  .label-head{
-    display:flex; justify-content:space-between; align-items:baseline;
-    background:var(--doca); border-bottom:2px solid var(--naval);
-    padding:10px 16px; font-weight:800; font-size:15px;
-  }
-  .label-head b{ font-weight:900; font-stretch:125%; font-size:19px; letter-spacing:-.01em; }
-  .label dl{ display:grid; grid-template-columns:1fr 1fr; }
-  .label .f{ padding:10px 16px 12px; border-bottom:1px solid var(--naval); }
-  .label .f:nth-child(odd){ border-right:1px solid var(--naval); }
-  .label .f.full{ grid-column:1 / -1; border-right:none; }
-  .label dt{ font-size:12.5px; color:var(--aco); font-weight:600; }
-  .label dd{ font-size:16px; font-weight:700; line-height:1.3; margin-top:2px; }
-  .label .status dd::before{
-    content:""; display:inline-block; width:9px; height:9px; border-radius:50%;
-    background:#1F9D55; margin-right:8px; vertical-align:1px;
-  }
-  .barcode{ padding:14px 16px 12px; display:flex; align-items:flex-end; justify-content:space-between; gap:16px; }
-  .barcode svg{ width:100%; max-width:236px; height:46px; fill:var(--naval); }
-  .barcode span{ font-size:13px; font-weight:700; letter-spacing:.06em; white-space:nowrap; }
+  .flow{ background:var(--lilac); border-radius:28px; padding:22px; }
+  .flow-top{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  .areas{ display:flex; gap:6px; flex-wrap:wrap; }
+  .areas button, .toggle button, .filters button{ font:inherit; cursor:pointer; border:none; }
+  .areas button{ font-size:14px; font-weight:600; padding:7px 13px; border-radius:999px; background:transparent; color:var(--muted); }
+  .areas button[aria-selected="true"]{ background:#fff; color:var(--ink); box-shadow:0 1px 2px rgba(20,22,43,.08); }
+  .toggle{ display:inline-flex; background:#fff; border-radius:999px; padding:4px; }
+  .toggle button{ font-size:14px; font-weight:600; padding:6px 14px; border-radius:999px; background:transparent; color:var(--muted); }
+  .toggle button[aria-pressed="true"]{ background:var(--ink); color:#fff; }
+  .flow-card{ margin-top:16px; background:#fff; border-radius:20px; padding:22px 22px 18px; min-height:300px; }
+  .flow-card h3{ font-family:var(--display); font-size:21px; font-weight:650; letter-spacing:-.01em; }
+  .flow-card .time{ margin-top:4px; font-size:15px; font-weight:600; }
+  .flow[data-mode="antes"] .time{ color:var(--warn); }
+  .flow[data-mode="depois"] .time{ color:var(--ok); }
+  .steps{ list-style:none; margin-top:16px; }
+  .steps li{ display:flex; gap:12px; padding:11px 0; border-top:1px solid var(--line); font-size:15.5px; }
+  .steps li::before{ content:""; flex:none; width:20px; height:20px; margin-top:2px; border-radius:6px; border:1.5px solid var(--line); }
+  .flow[data-mode="depois"] .steps li::before{ border-color:var(--ok); background:var(--ok) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat; }
+  .flow-card .note{ margin-top:12px; font-size:13.5px; color:var(--muted); }
+  .flow-card .swap{ animation:swap .35s ease; }
+  @keyframes swap{ from{ opacity:0; transform:translateY(6px); } to{ opacity:1; transform:none; } }
 
-  /* sections */
-  section{ padding:88px 0; }
-  section + section{ border-top:1px solid var(--linha); }
-  h2{
-    font-size:clamp(30px, 4vw, 42px);
-    font-weight:850; font-stretch:115%;
-    letter-spacing:-.025em; line-height:1.05;
-    margin-bottom:36px; max-width:22ch;
-  }
-  .two{ display:grid; grid-template-columns:1.25fr 1fr; gap:64px; }
-  .prose p{ max-width:62ch; margin-bottom:16px; }
-  .prose p:first-child{ font-size:20px; line-height:1.5; }
-  .facts{ border-top:2px solid var(--naval); }
-  .facts div{ display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--linha); font-size:15.5px; }
-  .facts dt{ color:var(--aco); }
-  .facts dd{ font-weight:650; text-align:right; }
+  section{ padding:96px 0; }
+  section.alt{ background:var(--surface); }
+  h2{ font-family:var(--display); font-size:clamp(32px, 4vw, 46px); font-weight:700; letter-spacing:-.03em; line-height:1.05; max-width:20ch; }
+  .sub{ margin-top:14px; color:var(--muted); font-size:18px; max-width:58ch; }
+  .head{ margin-bottom:44px; }
 
-  /* stack */
-  .stack{ display:grid; grid-template-columns:repeat(3,1fr); gap:36px 48px; }
-  .stack h3{ font-size:15px; font-weight:750; padding-bottom:8px; border-bottom:2px solid var(--naval); margin-bottom:10px; }
-  .stack p{ color:var(--aco); font-size:15.5px; line-height:1.7; }
-  .stack p strong{ color:var(--naval); font-weight:650; }
+  .about{ display:grid; grid-template-columns:1.2fr 1fr; gap:64px; align-items:start; }
+  .about .prose p{ margin-bottom:16px; max-width:60ch; color:#2E3247; }
+  .about .prose p:first-child{ font-size:22px; line-height:1.4; color:var(--ink); font-family:var(--display); letter-spacing:-.01em; }
+  .stats{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .stat{ background:#fff; border-radius:20px; padding:20px; }
+  .stat b{ display:block; font-family:var(--display); font-size:34px; font-weight:700; letter-spacing:-.03em; line-height:1.1; }
+  .stat span{ font-size:14.5px; color:var(--muted); }
 
-  /* manifest */
-  .manifest{ border-top:2px solid var(--naval); }
-  .manifest-row{
-    display:grid; grid-template-columns:260px 1fr 220px; gap:32px;
-    padding:26px 0; border-bottom:1px solid var(--linha);
-  }
-  .m-name h3{ font-size:20px; font-weight:800; font-stretch:105%; line-height:1.2; letter-spacing:-.01em; }
-  .m-status{ display:inline-block; margin-top:8px; font-size:13px; font-weight:650; padding:2px 8px; border:1px solid var(--naval); border-radius:2px; }
-  .m-desc{ color:#2B425B; max-width:60ch; }
-  .m-tech{ font-size:14.5px; color:var(--aco); }
-  .m-links{ margin-top:10px; display:flex; gap:16px; font-size:15px; font-weight:600; }
-  .more{ margin-top:40px; }
-  .more h3{ font-size:16px; font-weight:750; margin-bottom:12px; }
-  .more ul{ list-style:none; display:grid; grid-template-columns:repeat(3,1fr); gap:20px 32px; }
-  .more li a{ font-weight:650; display:block; }
-  .more li span{ font-size:15px; color:var(--aco); }
+  .area-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .area{ background:#fff; border-radius:22px; padding:26px; border:1px solid var(--line); }
+  .area.big{ grid-row:span 2; background:var(--ink); color:#fff; border-color:var(--ink); }
+  .area h3{ font-family:var(--display); font-size:22px; font-weight:650; letter-spacing:-.015em; margin-bottom:8px; }
+  .area p{ color:var(--muted); font-size:15.5px; }
+  .area.big p{ color:#B9BDD3; max-width:52ch; }
+  .area ul{ margin-top:14px; list-style:none; display:flex; flex-wrap:wrap; gap:8px; }
+  .area li{ font-size:13.5px; padding:4px 10px; border-radius:999px; background:var(--surface); color:#2E3247; }
+  .area.big li{ background:rgba(255,255,255,.1); color:#fff; }
 
-  /* services */
-  .services{ display:grid; grid-template-columns:repeat(2,1fr); gap:0 64px; }
-  .service{ padding:24px 0 28px; border-top:2px solid var(--naval); }
-  .service h3{ font-size:20px; font-weight:800; font-stretch:105%; letter-spacing:-.01em; margin-bottom:8px; }
-  .service p{ color:#2B425B; max-width:46ch; }
-  .service .ex{ margin-top:10px; font-size:14.5px; color:var(--aco); }
-  .intro{ max-width:60ch; color:var(--aco); margin:-16px 0 40px; font-size:18px; }
+  .projects{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .project{ background:#fff; border:1px solid var(--line); border-radius:22px; padding:26px; display:flex; flex-direction:column; }
+  .project.feature{ grid-column:1 / -1; display:grid; grid-template-columns:1fr 1.4fr; gap:32px; }
+  .p-tags{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+  .p-tag{ font-size:13px; font-weight:600; padding:3px 10px; border-radius:999px; background:var(--lilac); color:var(--accent-ink); }
+  .p-tag.state{ background:var(--surface); color:var(--muted); }
+  .project h3{ font-family:var(--display); font-size:23px; font-weight:650; letter-spacing:-.015em; line-height:1.2; }
+  .project p{ margin-top:10px; color:#3A3F56; }
+  .project.feature p{ margin-top:0; }
+  .p-tech{ margin-top:auto; padding-top:16px; font-size:14.5px; color:var(--muted); }
+  .p-links{ margin-top:10px; display:flex; gap:18px; font-weight:600; font-size:15px; }
+  .more{ margin-top:28px; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; list-style:none; }
+  .more li{ font-size:15px; color:var(--muted); }
+  .more a{ display:block; font-weight:600; }
 
-  /* certs */
-  .certs{ display:flex; flex-wrap:wrap; gap:10px; }
-  .certs li{ list-style:none; background:var(--etiqueta); border:1px solid var(--linha); border-radius:3px; padding:8px 12px; font-size:15px; }
-  .certs li b{ font-weight:750; margin-right:6px; }
+  .stack{ display:grid; grid-template-columns:repeat(3,1fr); gap:32px 40px; }
+  .stack h3{ font-size:15px; font-weight:700; margin-bottom:10px; }
+  .chips{ display:flex; flex-wrap:wrap; gap:8px; list-style:none; }
+  .chips li{ font-size:14.5px; padding:6px 12px; border-radius:10px; background:var(--surface); }
 
-  /* contact */
-  .contact{ background:var(--naval); color:#fff; border-top:none; }
+  .cert-highlights{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:40px; }
+  .ch{ background:#fff; border:1px solid var(--line); border-radius:22px; padding:22px; text-decoration:none; color:var(--ink); display:flex; flex-direction:column; gap:6px; transition:border-color .15s, transform .15s; }
+  .ch:hover{ border-color:var(--accent); transform:translateY(-2px); }
+  .ch b{ font-family:var(--display); font-size:36px; font-weight:700; letter-spacing:-.03em; line-height:1; color:var(--accent); }
+  .ch span{ font-weight:600; line-height:1.35; }
+  .ch small{ color:var(--muted); font-size:13.5px; margin-top:auto; padding-top:6px; }
+  .filters{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+  .filters button{ font-size:14.5px; font-weight:600; padding:8px 16px; border-radius:999px; background:#fff; border:1.5px solid var(--line); color:var(--muted); }
+  .filters button[aria-pressed="true"]{ background:var(--ink); border-color:var(--ink); color:#fff; }
+  .cert-list{ list-style:none; background:#fff; border:1px solid var(--line); border-radius:22px; padding:6px 24px; }
+  .cert-list li{ display:grid; grid-template-columns:1fr auto auto; gap:20px; align-items:center; padding:13px 0; border-bottom:1px solid var(--line); font-size:15.5px; }
+  .cert-list li:last-of-type{ border-bottom:none; }
+  .cert-list li[hidden]{ display:none; }
+  .cert-list .meta{ color:var(--muted); font-size:14px; white-space:nowrap; }
+  .cert-list a{ font-weight:600; font-size:14.5px; white-space:nowrap; }
+  .cert-foot{ margin-top:14px; font-size:14.5px; color:var(--muted); }
+
+  .contact{ background:var(--ink); color:#fff; }
+  .contact .wrap{ display:grid; grid-template-columns:1.2fr 1fr; gap:48px; align-items:end; }
   .contact h2{ color:#fff; }
-  .contact p{ max-width:56ch; font-size:19px; color:#C9D5E1; }
-  .contact .btn{ border-color:#fff; color:#fff; }
-  .contact .btn:hover{ background:#1A3D60; }
-  .contact .btn.primary{ background:var(--doca); border-color:var(--doca); color:var(--naval); }
-  .contact .btn.primary:hover{ background:#F7D162; }
-  footer{ background:var(--naval); color:#8FA3B8; font-size:14.5px; }
-  footer .wrap{ display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:22px 28px; border-top:1px solid #23415F; }
-  footer a{ color:#C9D5E1; }
+  .contact p{ margin-top:16px; color:#B9BDD3; font-size:18px; max-width:50ch; }
+  .contact .actions{ justify-content:flex-end; }
+  .contact .phone{ font-size:16px; margin-top:10px; }
+  .contact .phone a{ color:#fff; font-weight:600; }
+  .contact .btn{ background:transparent; color:#fff; border-color:rgba(255,255,255,.25); }
+  .contact .btn:hover{ border-color:#fff; }
+  .contact .btn.primary{ background:#fff; color:var(--ink); border-color:#fff; }
+  .contact .btn.primary:hover{ background:var(--lilac); }
+  footer{ background:var(--ink); color:#8D92AD; font-size:14.5px; }
+  footer .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding:22px 28px; border-top:1px solid rgba(255,255,255,.1); }
+  footer a{ color:#C9CCE0; }
 
-  @media (max-width: 900px){
-    .hero .wrap, .two{ grid-template-columns:1fr; gap:48px; }
-    .label{ max-width:460px; }
+  @media (max-width: 960px){
+    .hero .wrap, .about, .contact .wrap{ grid-template-columns:1fr; gap:48px; }
+    .contact .actions{ justify-content:flex-start; }
+    .area-grid{ grid-template-columns:1fr 1fr; }
+    .area.big{ grid-row:auto; grid-column:1 / -1; }
+    .project.feature{ grid-template-columns:1fr; gap:12px; }
+    .cert-highlights{ grid-template-columns:1fr 1fr; }
     .stack{ grid-template-columns:1fr 1fr; }
-    .manifest-row{ grid-template-columns:1fr; gap:10px; }
-    .more ul{ grid-template-columns:1fr; }
+    .more{ grid-template-columns:1fr; }
   }
-  @media (max-width: 620px){
+  @media (max-width: 640px){
     body{ font-size:16px; }
     .wrap{ padding:0 20px; }
     .top nav a:not(.cv){ display:none; }
-    .hero{ padding:56px 0 72px; }
-    .lede{ font-size:19px; }
-    .stack, .services{ grid-template-columns:1fr; }
-    section{ padding:64px 0; }
-    .label{ transform:rotate(.8deg); animation:none; margin-right:6px; }
-    .label dd{ font-size:15px; }
+    .hero{ padding:52px 0 72px; }
+    section{ padding:72px 0; }
+    .area-grid, .projects, .stack{ grid-template-columns:1fr; }
+    .area.big{ grid-row:auto; }
+    .flow{ padding:14px; border-radius:22px; }
+    .cert-list{ padding:4px 16px; }
+    .cert-list li{ grid-template-columns:1fr auto; gap:4px 16px; }
+    .cert-list .meta{ grid-column:1; grid-row:2; }
+    .cert-list a{ grid-column:2; grid-row:1 / span 2; }
   }
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior:auto; }
-    .label{ animation:none; }
+    .flow-card .swap{ animation:none; }
+    .ch{ transition:none; }
   }
 </style>
 </head>
@@ -206,11 +197,12 @@
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#">Weslley Larroza</a>
+    <a class="brand" href="#"><i aria-hidden="true">WL</i>Weslley Larroza</a>
     <nav aria-label="Seções">
       <a href="#sobre">Sobre</a>
+      <a href="#areas">Onde ajudo</a>
       <a href="#projetos">Projetos</a>
-      <a href="#servicos">Para empresas</a>
+      <a href="#certificados">Certificados</a>
       <a href="#contato">Contato</a>
       <a class="cv" href="cv/Weslley-Larroza-CV.pdf">Baixar CV</a>
     </nav>
@@ -221,9 +213,12 @@
   <div class="hero">
     <div class="wrap">
       <div>
-        <h1><span>Weslley</span><span>Larroza</span></h1>
-        <p class="lede">Desenvolvedor full stack. Tiro o trabalho manual que fica entre sistemas, planilhas e pessoas.</p>
-        <p class="hero-sub">Construo APIs, automações e integrações com C#/.NET, Python, JavaScript e Flutter. Vim da infraestrutura de TI e hoje trabalho dentro da logística de exportação, então entendo o problema antes de escrever o código.</p>
+        <h1>Menos trabalho manual, mais tempo para o que importa.</h1>
+        <p class="lede">Sou desenvolvedor full stack. Automatizo processos e conecto sistemas, planilhas e pessoas, seja no administrativo, no financeiro, no comercial ou na operação.</p>
+        <div class="who">
+          <span class="avatar" aria-hidden="true">WL</span>
+          <span><b>Weslley Larroza</b>C#/.NET, Python, JavaScript e Flutter. Itajaí, SC</span>
+        </div>
         <div class="actions">
           <a class="btn primary" href="#projetos">Ver projetos</a>
           <a class="btn" href="cv/Weslley-Larroza-CV.pdf">Baixar CV</a>
@@ -231,138 +226,185 @@
         </div>
       </div>
 
-      <aside class="label" aria-label="Resumo do perfil">
-        <div class="label-head"><b>Gate pass</b><span>Porto de Itajaí, SC</span></div>
-        <dl>
-          <div class="f"><dt>Remetente</dt><dd>Infraestrutura de TI</dd></div>
-          <div class="f"><dt>Destino</dt><dd>Seu time ou sua operação</dd></div>
-          <div class="f full"><dt>Conteúdo</dt><dd>APIs, automações, integrações e apps mobile</dd></div>
-          <div class="f"><dt>Formação</dt><dd>ADS, Uniasselvi</dd></div>
-          <div class="f"><dt>Cursos</dt><dd>Trilhas AI&#8209;102 e AI&#8209;900, 390+ certificados</dd></div>
-          <div class="f full status"><dt>Status</dt><dd>Disponível para vagas e projetos</dd></div>
-        </dl>
-        <div class="barcode">
-          <svg viewBox="0 0 236 46" preserveAspectRatio="none" aria-hidden="true"><rect x="0" y="0" width="2" height="46"/><rect x="5" y="0" width="2" height="46"/><rect x="11" y="0" width="4" height="46"/><rect x="17" y="0" width="6" height="46"/><rect x="27" y="0" width="2" height="46"/><rect x="33" y="0" width="4" height="46"/><rect x="38" y="0" width="2" height="46"/><rect x="41" y="0" width="2" height="46"/><rect x="44" y="0" width="2" height="46"/><rect x="48" y="0" width="4" height="46"/><rect x="54" y="0" width="4" height="46"/><rect x="60" y="0" width="6" height="46"/><rect x="67" y="0" width="3" height="46"/><rect x="73" y="0" width="2" height="46"/><rect x="77" y="0" width="3" height="46"/><rect x="83" y="0" width="2" height="46"/><rect x="88" y="0" width="6" height="46"/><rect x="98" y="0" width="4" height="46"/><rect x="103" y="0" width="3" height="46"/><rect x="108" y="0" width="2" height="46"/><rect x="114" y="0" width="3" height="46"/><rect x="119" y="0" width="2" height="46"/><rect x="122" y="0" width="4" height="46"/><rect x="128" y="0" width="2" height="46"/><rect x="134" y="0" width="2" height="46"/><rect x="139" y="0" width="3" height="46"/><rect x="144" y="0" width="3" height="46"/><rect x="149" y="0" width="2" height="46"/><rect x="153" y="0" width="2" height="46"/><rect x="159" y="0" width="2" height="46"/><rect x="165" y="0" width="6" height="46"/><rect x="173" y="0" width="2" height="46"/><rect x="177" y="0" width="2" height="46"/><rect x="181" y="0" width="4" height="46"/><rect x="187" y="0" width="2" height="46"/><rect x="193" y="0" width="6" height="46"/><rect x="203" y="0" width="6" height="46"/><rect x="213" y="0" width="2" height="46"/><rect x="219" y="0" width="2" height="46"/><rect x="222" y="0" width="3" height="46"/><rect x="226" y="0" width="6" height="46"/><rect x="234" y="0" width="2" height="46"/></svg>
-          <span>WL 2026 ITJ</span>
+      <div class="flow" id="flow" data-mode="antes">
+        <div class="flow-top">
+          <div class="areas" role="tablist" aria-label="Área">
+            <button type="button" role="tab" data-area="adm" aria-selected="true">Administrativo</button>
+            <button type="button" role="tab" data-area="fin" aria-selected="false">Financeiro e fiscal</button>
+            <button type="button" role="tab" data-area="ops" aria-selected="false">Operação</button>
+          </div>
+          <div class="toggle" role="group" aria-label="Comparar">
+            <button type="button" data-mode="antes" aria-pressed="true">Antes</button>
+            <button type="button" data-mode="depois" aria-pressed="false">Depois</button>
+          </div>
         </div>
-      </aside>
+        <div class="flow-card" role="tabpanel" aria-live="polite">
+          <div class="swap" id="flow-body"></div>
+          <p class="note">Exemplos de processos que já automatizei.</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <section id="sobre">
-    <div class="wrap">
-      <h2>Comecei resolvendo problemas na infraestrutura</h2>
-      <div class="two">
-        <div class="prose">
-          <p>Fui o único técnico de TI de uma filial: servidores, redes, Active Directory, backups e suporte. Isso me deu uma base que muitos desenvolvedores não têm. Sei o que acontece por trás do sistema, não só na camada de código.</p>
-          <p>Daí passei para o desenvolvimento. Numa distribuidora, construí uma plataforma web interna para as filiais (API REST em C# com front-end em JavaScript), robôs de RPA fiscal, monitoramento com alertas automáticos e um app Flutter offline-first para fotos de pedidos.</p>
-          <p>Hoje trabalho na logística de exportação de uma indústria frigorífica. Vivo de perto o gate, os pedidos e as planilhas, e desenvolvo ferramentas para cruzar esses dados sem conferência manual.</p>
-        </div>
-        <dl class="facts">
-          <div><dt>Cidade</dt><dd>Itajaí, SC</dd></div>
-          <div><dt>Foco</dt><dd>Full stack e automação</dd></div>
-          <div><dt>Formação</dt><dd>Tecnólogo em ADS, Uniasselvi</dd></div>
-          <div><dt>Trilhas Azure AI</dt><dd>AI-102, AI-900 (DIO)</dd></div>
-          <div><dt>Plataforma corporativa</dt><dd>TOTVS Fluig</dd></div>
-          <div><dt>Inglês</dt><dd>Leitura técnica</dd></div>
-        </dl>
+  <section id="sobre" class="alt">
+    <div class="wrap about">
+      <div class="prose">
+        <p>Comecei na infraestrutura de TI e fui para o desenvolvimento resolvendo os problemas que via no dia a dia das equipes.</p>
+        <p>Fui o único técnico de TI de uma filial, cuidando de servidores, redes, Active Directory e suporte. Isso me ensinou a entender o que acontece por trás de um sistema, não só a camada de código.</p>
+        <p>No desenvolvimento, construí uma plataforma web interna para filiais (API REST em C# com front-end em JavaScript), robôs de RPA fiscal, monitoramento com alertas automáticos e um app Flutter que funciona offline. Hoje desenvolvo ferramentas que cruzam sistemas e planilhas para eliminar conferência manual.</p>
       </div>
+      <div class="stats">
+        <div class="stat"><b>28</b><span>certificados, 252 horas de estudo</span></div>
+        <div class="stat"><b>ADS</b><span>Tecnólogo em Análise e Desenvolvimento de Sistemas, Uniasselvi</span></div>
+        <div class="stat"><b>AI-102</b><span>Formação em engenharia de IA no Azure</span></div>
+        <div class="stat"><b>Fluig</b><span>Workflows integrados ao ERP TOTVS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="areas">
+    <div class="wrap">
+      <div class="head">
+        <h2>Onde eu ajudo</h2>
+        <p class="sub">Todo setor tem uma tarefa que alguém repete toda semana copiando dado de um lugar para outro. É aí que eu entro.</p>
+      </div>
+      <div class="area-grid">
+        <div class="area big">
+          <h3>Automação de processos</h3>
+          <p>Robôs e integrações que fazem o trabalho repetitivo no lugar da equipe: preencher portais, conferir documentos, juntar planilhas, gerar relatórios. Quando não existe ferramenta pronta, construo o sistema web, a API ou o app sob medida.</p>
+          <ul><li>RPA</li><li>Integração de sistemas</li><li>Relatórios automáticos</li><li>Alertas</li><li>Sistemas web</li><li>Apps mobile</li></ul>
+        </div>
+        <div class="area"><h3>Administrativo</h3><p>Relatórios que se montam sozinhos, cadastros sem digitação dupla, fluxos de aprovação no Fluig.</p></div>
+        <div class="area"><h3>Financeiro e fiscal</h3><p>Validação e envio de notas fiscais, conciliação entre sistemas e acompanhamento de protocolos.</p></div>
+        <div class="area"><h3>Comercial</h3><p>Pedidos que entram no sistema sem redigitação e painéis de acompanhamento de vendas.</p></div>
+        <div class="area"><h3>Operação e logística</h3><p>Rastreamento de entregas, conferência de pedidos e cargas, simulação de carregamento.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <h2>Projetos</h2>
+        <p class="sub">Sistemas e automações que construí, a maioria em uso por equipes de verdade.</p>
+      </div>
+      <div class="projects">
+        <article class="project feature">
+          <div><div class="p-tags"><span class="p-tag">Administrativo</span><span class="p-tag">Sistema web</span><span class="p-tag state">Em produção</span></div><h3>Plataforma web interna para filiais</h3></div>
+          <div><p>Sistema usado pelas filiais de uma distribuidora para centralizar rotinas que antes corriam por e-mail e planilha. API REST em C# com front-end em JavaScript, relatórios em SQL Server e monitoramento com alertas por e-mail e Slack.</p><p class="p-tech">C# / .NET, JavaScript, SQL Server</p></div>
+        </article>
+        <article class="project">
+          <div class="p-tags"><span class="p-tag">Fiscal</span><span class="p-tag">RPA</span><span class="p-tag state">Em produção</span></div>
+          <h3>Robô de RPA fiscal</h3>
+          <p>Valida e transmite documentos fiscais em sistemas do governo, confere a tela por visão computacional para evitar falso positivo e avisa a equipe quando algo falha.</p>
+          <p class="p-tech">Python, Playwright, OpenCV, Supabase</p>
+        </article>
+        <article class="project">
+          <div class="p-tags"><span class="p-tag">Operação</span><span class="p-tag">Integração</span><span class="p-tag state">Em desenvolvimento</span></div>
+          <h3>Conciliação de sistema e planilhas</h3>
+          <p>Cruza os registros de um sistema de gestão com as planilhas da equipe, aponta divergências e mantém tudo sincronizado, sem conferência manual.</p>
+          <p class="p-tech">Python, Excel, JavaScript</p>
+        </article>
+        <article class="project">
+          <div class="p-tags"><span class="p-tag">Operação</span><span class="p-tag">Automação de dados</span><span class="p-tag state">Em produção</span></div>
+          <h3>Rastreamento automático de entregas</h3>
+          <p>Consulta o status de notas fiscais em portais de várias transportadoras, cada uma com seu captcha, e grava os resultados no Google Sheets.</p>
+          <p class="p-tech">Python, Selenium, Google Sheets API</p>
+        </article>
+        <article class="project">
+          <div class="p-tags"><span class="p-tag">Operação</span><span class="p-tag">Web</span><span class="p-tag state">Demo ao vivo</span></div>
+          <h3>LogiPlan Pro</h3>
+          <p>Simulador de carregamento e cubagem com visualização 3D. Calcula pilhas, peso e posição das cargas em diferentes veículos.</p>
+          <p class="p-tech">JavaScript, Plotly.js, Bootstrap</p><p class="p-links"><a href="https://weslley-larroza.github.io/-Logiplan-demo/">Abrir demo</a><a href="https://github.com/weslley-larroza/-Logiplan-demo">Código</a></p>
+        </article>
+      </div>
+      <ul class="more">
+        <li><a href="https://github.com/weslley-larroza/App-android-update-fotos">App de fotos de pedidos</a>Flutter, funciona offline e reenvia quando a conexão volta.</li>
+        <li><a href="https://github.com/weslley-larroza/Etiqueta-NF-Printer">Etiqueta NF Printer</a>App desktop em Python para imprimir etiquetas de notas fiscais.</li>
+        <li><a href="https://github.com/weslley-larroza/CONEXAO-REMOTA">Conexão Remota</a>Organiza acessos RDP a vários servidores a partir de um JSON.</li>
+      </ul>
     </div>
   </section>
 
   <section id="stack">
     <div class="wrap">
-      <h2>Com o que eu trabalho</h2>
+      <div class="head"><h2>Tecnologias</h2></div>
       <div class="stack">
-        <div><h3>Backend e APIs</h3><p><strong>C#/.NET</strong> (API REST), <strong>Python</strong> com FastAPI e Flask, Java (fundamentos)</p></div>
-        <div><h3>Automação e RPA</h3><p><strong>Playwright</strong>, Selenium, PyAutoGUI, OpenCV, BeautifulSoup, <strong>N8N</strong></p></div>
-        <div><h3>Front-end e mobile</h3><p><strong>JavaScript</strong>, TypeScript, HTML/CSS, <strong>Flutter</strong>/Dart com SQLite e Hive</p></div>
-        <div><h3>Dados</h3><p><strong>SQL Server</strong>, PostgreSQL, <strong>Supabase</strong> (RLS), SQLite, MySQL, MongoDB (fundamentos)</p></div>
-        <div><h3>Infra e entrega</h3><p>Linux, <strong>Git e GitHub Actions</strong>, Docker e AWS (fundamentos), redes, AD, RDP</p></div>
-        <div><h3>Plataformas e IA</h3><p><strong>TOTVS Fluig</strong>, Azure AI, Azure OpenAI, Scrum, Figma</p></div>
+        <div><h3>Backend e APIs</h3><ul class="chips"><li>C# / .NET</li><li>Python</li><li>FastAPI</li><li>Flask</li><li>Java (fundamentos)</li></ul></div>
+        <div><h3>Front-end e mobile</h3><ul class="chips"><li>JavaScript</li><li>TypeScript</li><li>HTML e CSS</li><li>Flutter / Dart</li></ul></div>
+        <div><h3>Automação</h3><ul class="chips"><li>Playwright</li><li>Selenium</li><li>PyAutoGUI</li><li>OpenCV</li><li>N8N</li></ul></div>
+        <div><h3>Dados</h3><ul class="chips"><li>SQL Server</li><li>PostgreSQL</li><li>Supabase</li><li>SQLite</li><li>MySQL</li><li>MongoDB</li></ul></div>
+        <div><h3>Infra e entrega</h3><ul class="chips"><li>Linux</li><li>Git e GitHub Actions</li><li>Docker</li><li>AWS</li><li>Redes e AD</li></ul></div>
+        <div><h3>Plataformas e IA</h3><ul class="chips"><li>TOTVS Fluig</li><li>Azure AI</li><li>Azure OpenAI</li><li>Scrum</li><li>Figma</li></ul></div>
       </div>
     </div>
   </section>
 
-  <section id="projetos">
+  <section id="certificados" class="alt">
     <div class="wrap">
-      <h2>Projetos que estão rodando</h2>
-      <div class="manifest">
-      <article class="manifest-row">
-        <div class="m-name"><h3>Conciliação gate x pedidos</h3><span class="m-status">Em desenvolvimento</span></div>
-        <p class="m-desc">Cruza os registros de portaria com os pedidos do sistema de armazém e mantém sincronizadas as planilhas da equipe de expedição. Acaba com a conferência manual entre sistema e Excel e aponta divergências antes da carga sair.</p>
-        <div class="m-meta"><p class="m-tech">Python, Excel, JavaScript</p></div>
-      </article>
-      <article class="manifest-row">
-        <div class="m-name"><h3>Rastreamento logístico internacional</h3><span class="m-status">Em produção</span></div>
-        <p class="m-desc">Orquestra vários robôs de coleta em portais com proteção anti-bot e grava tudo num banco Supabase/PostgreSQL, com monitoramento de erros em tempo real e log centralizado.</p>
-        <div class="m-meta"><p class="m-tech">Python, Selenium, PostgreSQL</p></div>
-      </article>
-      <article class="manifest-row">
-        <div class="m-name"><h3>RPA fiscal</h3><span class="m-status">Em produção</span></div>
-        <p class="m-desc">Robô que valida e transmite documentos fiscais em sistemas do governo. Confere o estado da tela por visão computacional para evitar falso positivo, reinicia o processo limpo quando falha e avisa a equipe automaticamente.</p>
-        <div class="m-meta"><p class="m-tech">Python, Playwright, OpenCV, Supabase</p></div>
-      </article>
-      <article class="manifest-row">
-        <div class="m-name"><h3>Rastreamento rodoviário de notas</h3><span class="m-status">Automação de dados</span></div>
-        <p class="m-desc">Consulta a entrega de notas fiscais em portais de várias transportadoras, cada uma com seu fluxo e captcha, e grava data e previsão direto no Google Sheets. O que não encontra vai para uma fila de verificação manual.</p>
-        <div class="m-meta"><p class="m-tech">Python, Selenium, Google Sheets API</p></div>
-      </article>
-      <article class="manifest-row">
-        <div class="m-name"><h3>LogiPlan Pro</h3><span class="m-status">Demo ao vivo</span></div>
-        <p class="m-desc">Simula o carregamento e a cubagem de cargas em carreta, vanderleia, truck e rodotrem, com visualização 3D. Calcula pilhas, peso e posição dos blocos e avisa excesso de peso.</p>
-        <div class="m-meta"><p class="m-tech">JavaScript, Plotly.js, Bootstrap</p><p class="m-links"><a href="https://weslley-larroza.github.io/-Logiplan-demo/">Abrir demo</a><a href="https://github.com/weslley-larroza/-Logiplan-demo">Código</a></p></div>
-      </article>
+      <div class="head">
+        <h2>Certificados</h2>
+        <p class="sub">28 certificados e 252 horas de estudo. Clique em qualquer um para abrir o PDF.</p>
       </div>
-      <div class="more">
-        <h3>Outros repositórios</h3>
-        <ul>
-        <li><a href="https://github.com/weslley-larroza/App-android-update-fotos">App de fotos de pedidos</a><span>Flutter. Captura, redimensiona e envia fotos vinculadas ao número do pedido, funcionando offline.</span></li>
-        <li><a href="https://github.com/weslley-larroza/Etiqueta-NF-Printer">Etiqueta NF Printer</a><span>Python. Impressão de etiquetas de notas fiscais com escolha de impressora.</span></li>
-        <li><a href="https://github.com/weslley-larroza/CONEXAO-REMOTA">Conexão Remota</a><span>Python. Organiza acessos RDP a vários servidores a partir de um JSON.</span></li>
-        </ul>
+      <div class="cert-highlights">
+        <a class="ch" href="certificados/ai-102-certification.pdf" target="_blank" rel="noopener"><b>30h</b><span>Formação AI-102: engenharia de IA no Azure</span><small>nov/2025</small></a>
+        <a class="ch" href="certificados/fluig-avancado.pdf" target="_blank" rel="noopener"><b>40h</b><span>Fluig avançado: workflows integrados ao ERP</span><small>jul/2026</small></a>
+        <a class="ch" href="certificados/python-fundamentals.pdf" target="_blank" rel="noopener"><b>26h</b><span>Formação Python Fundamentals</span><small>ago/2025</small></a>
+        <a class="ch" href="certificados/azure-ai-fundamentals-ai-900.pdf" target="_blank" rel="noopener"><b>15h</b><span>Azure AI Fundamentals (AI-900)</span><small>jul/2025</small></a>
       </div>
-    </div>
-  </section>
-
-  <section id="servicos">
-    <div class="wrap">
-      <h2>O que posso resolver na sua operação</h2>
-      <p class="intro">Também atendo empresas por projeto. Começo entendendo o processo e entrego uma melhoria pequena e mensurável antes de qualquer coisa grande.</p>
-      <div class="services">
-        <div class="service"><h3>Tarefas manuais repetitivas</h3><p>Robôs e scripts que copiam dados entre sistemas, preenchem portais e conferem documentos no lugar da equipe.</p><p class="ex">Exemplo: RPA fiscal, consulta automática em portais de transportadoras</p></div>
-        <div class="service"><h3>Sistemas que não conversam</h3><p>Ligo ERP, WMS, banco de dados e Excel ou Google Sheets para a informação chegar sem digitação dupla.</p><p class="ex">Exemplo: conciliação de gate com pedidos</p></div>
-        <div class="service"><h3>Sistemas web sob medida</h3><p>Painéis internos, APIs e telas de operação feitos para o processo da empresa, e não o contrário.</p><p class="ex">Exemplo: plataforma interna para filiais em C#/.NET</p></div>
-        <div class="service"><h3>Relatórios e alertas</h3><p>Relatórios que se montam sozinhos e avisos por e-mail ou chat quando algo sai do normal.</p><p class="ex">Exemplo: alertas do SQL Server para e-mail e Slack</p></div>
+      <div class="filters" role="group" aria-label="Filtrar certificados">
+        <button type="button" data-f="all" aria-pressed="true">Todos</button>
+        <button type="button" data-f="ia" aria-pressed="false">IA e Azure</button>
+        <button type="button" data-f="dev" aria-pressed="false">Desenvolvimento</button>
+        <button type="button" data-f="dados" aria-pressed="false">Dados</button>
+        <button type="button" data-f="infra" aria-pressed="false">Infra e segurança</button>
       </div>
-    </div>
-  </section>
-
-  <section id="certificacoes">
-    <div class="wrap">
-      <h2>Formação contínua</h2>
-      <ul class="certs">
-        <li><b>AI-102</b>Azure AI Engineer, trilha DIO (30h)</li>
-        <li><b>AI-900</b>Azure AI Fundamentals, trilha DIO (15h)</li>
-        <li><b>Fluig</b>Avançado (40h) e mentoria TOTVS</li>
-        <li><b>Bootcamp</b>TOTVS Engenharia de Dados e ML</li>
-        <li><b>Bootcamp</b>Luizalabs Back-end Python</li>
-        <li><b>FastAPI</b>Assíncrono</li>
-        <li><b>Microsoft</b>AI Agents e Arquitetura de Dados com IA</li>
-        <li><b>GitHub</b>Certification (10h)</li>
+      <ul class="cert-list" id="cert-list">
+        <li data-area="dev"><span>Fluig Avançado: workflows integrados ao ERP</span><span class="meta">40h, jul/2026</span><a href="certificados/fluig-avancado.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Fluig Avançado: workflows integrados ao ERP">Ver PDF</a></li>
+        <li data-area="ia"><span>Formação AI-102 Certification</span><span class="meta">30h, nov/2025</span><a href="certificados/ai-102-certification.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Formação AI-102 Certification">Ver PDF</a></li>
+        <li data-area="ia"><span>Desenvolvendo Soluções de Processamento de Linguagem Natural</span><span class="meta">8h, nov/2025</span><a href="certificados/solucoes-processamento-linguagem-natural.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Desenvolvendo Soluções de Processamento de Linguagem Natural">Ver PDF</a></li>
+        <li data-area="ia"><span>Soluções de IA Generativa com o Azure OpenAI</span><span class="meta">5h, nov/2025</span><a href="certificados/ia-generativa-azure-openai.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Soluções de IA Generativa com o Azure OpenAI">Ver PDF</a></li>
+        <li data-area="ia"><span>Soluções com a IA do Azure para Informação de Documentos</span><span class="meta">4h, nov/2025</span><a href="certificados/azure-ia-informacao-documentos.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Soluções com a IA do Azure para Informação de Documentos">Ver PDF</a></li>
+        <li data-area="dev"><span>Formação Python Fundamentals</span><span class="meta">26h, ago/2025</span><a href="certificados/python-fundamentals.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Formação Python Fundamentals">Ver PDF</a></li>
+        <li data-area="ia"><span>Formação Microsoft Azure AI Fundamentals (AI-900)</span><span class="meta">15h, jul/2025</span><a href="certificados/azure-ai-fundamentals-ai-900.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Formação Microsoft Azure AI Fundamentals (AI-900)">Ver PDF</a></li>
+        <li data-area="ia"><span>Aceleração Microsoft AI Agents</span><span class="meta">4h, jul/2025</span><a href="certificados/aceleracao-microsoft-ai-agents.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Aceleração Microsoft AI Agents">Ver PDF</a></li>
+        <li data-area="ia"><span>Skills Certification: Microsoft AI Agents</span><span class="meta">1h, jul/2025</span><a href="certificados/skills-microsoft-ai-agents.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Skills Certification: Microsoft AI Agents">Ver PDF</a></li>
+        <li data-area="ia"><span>Formação Fundamentos de Inteligência Artificial</span><span class="meta">10h, jul/2025</span><a href="certificados/fundamentos-inteligencia-artificial.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Formação Fundamentos de Inteligência Artificial">Ver PDF</a></li>
+        <li data-area="ia"><span>Fundamentos da IA Generativa</span><span class="meta">1h, jul/2025</span><a href="certificados/fundamentos-ia-generativa.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Fundamentos da IA Generativa">Ver PDF</a></li>
+        <li data-area="dev"><span>Linguagem de Programação Dart</span><span class="meta">11h, jul/2025</span><a href="certificados/linguagem-dart.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Linguagem de Programação Dart">Ver PDF</a></li>
+        <li data-area="dev"><span>Consumindo APIs com Flutter</span><span class="meta">11h, jul/2025</span><a href="certificados/consumindo-apis-flutter.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Consumindo APIs com Flutter">Ver PDF</a></li>
+        <li data-area="dev"><span>Formação GitHub Certification</span><span class="meta">10h, jul/2025</span><a href="certificados/github-certification.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Formação GitHub Certification">Ver PDF</a></li>
+        <li data-area="dados"><span>Persistência de Dados com SQLite</span><span class="meta">7h, jul/2025</span><a href="certificados/persistencia-sqlite.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Persistência de Dados com SQLite">Ver PDF</a></li>
+        <li data-area="dados"><span>Armazenando Dados com Hive</span><span class="meta">2h, jul/2025</span><a href="certificados/banco-de-dados-hive.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Armazenando Dados com Hive">Ver PDF</a></li>
+        <li data-area="dev"><span>Scrum Fundamentals</span><span class="meta">4h, jul/2025</span><a href="certificados/scrum-fundamentals.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Scrum Fundamentals">Ver PDF</a></li>
+        <li data-area="dados"><span>Introdução a Banco de Dados NoSQL</span><span class="meta">3h, dez/2024</span><a href="certificados/banco-de-dados-nosql.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Introdução a Banco de Dados NoSQL">Ver PDF</a></li>
+        <li data-area="infra"><span>Redes de Sensores Sem Fio para IoT</span><span class="meta">5h, dez/2024</span><a href="certificados/redes-sensores-iot.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Redes de Sensores Sem Fio para IoT">Ver PDF</a></li>
+        <li data-area="infra"><span>Modelos de Inteligência Artificial para IoT</span><span class="meta">2h, dez/2024</span><a href="certificados/modelos-ia-iot.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Modelos de Inteligência Artificial para IoT">Ver PDF</a></li>
+        <li data-area="infra"><span>Pós-Exploração em Sistemas Comprometidos</span><span class="meta">2h, dez/2024</span><a href="certificados/pos-exploracao-sistemas.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Pós-Exploração em Sistemas Comprometidos">Ver PDF</a></li>
+        <li data-area="infra"><span>Fundamentos de Testes de Invasão (Pentest)</span><span class="meta">1h, dez/2024</span><a href="certificados/fundamentos-pentest.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Fundamentos de Testes de Invasão (Pentest)">Ver PDF</a></li>
+        <li data-area="infra"><span>Conceitos e Técnicas de Varredura de Rede</span><span class="meta">1h, dez/2024</span><a href="certificados/varredura-de-rede.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Conceitos e Técnicas de Varredura de Rede">Ver PDF</a></li>
+        <li data-area="dev"><span>Formação Lógica de Programação</span><span class="meta">41h, mar/2024</span><a href="certificados/logica-de-programacao.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Formação Lógica de Programação">Ver PDF</a></li>
+        <li data-area="infra"><span>Manipulando Arquivos no Linux</span><span class="meta">3h, abr/2023</span><a href="certificados/linux-manipulando-arquivos.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Manipulando Arquivos no Linux">Ver PDF</a></li>
+        <li data-area="infra"><span>Gerenciando Usuários no Linux</span><span class="meta">2h, abr/2023</span><a href="certificados/linux-gerenciando-usuarios.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Gerenciando Usuários no Linux">Ver PDF</a></li>
+        <li data-area="infra"><span>Gerenciamento de Pacotes Linux</span><span class="meta">1h, abr/2023</span><a href="certificados/linux-gerenciamento-pacotes.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Gerenciamento de Pacotes Linux">Ver PDF</a></li>
+        <li data-area="dev"><span>Introdução à Qualidade de Software</span><span class="meta">2h, nov/2021</span><a href="certificados/qualidade-de-software.pdf" target="_blank" rel="noopener" aria-label="Abrir certificado Introdução à Qualidade de Software">Ver PDF</a></li>
       </ul>
+      <p class="cert-foot">A maioria pela DIO (Digital Innovation One), incluindo trilhas patrocinadas pela Microsoft.</p>
     </div>
   </section>
 
   <section id="contato" class="contact">
     <div class="wrap">
-      <h2>Vamos conversar</h2>
-      <p>Procurando alguém para o seu time de desenvolvimento, ou tem um processo que toma horas da equipe toda semana? Uma conversa de 20 minutos já mostra se dá para automatizar.</p>
+      <div>
+        <h2>Vamos conversar?</h2>
+        <p>Procurando alguém para o seu time, ou tem um processo que toma horas da equipe toda semana? Em 20 minutos de conversa dá para saber se vale automatizar.</p>
+        <p class="phone">WhatsApp: <a href="https://wa.me/5547992314420?text=Ol%C3%A1%20Weslley%2C%20vi%20seu%20site%20e%20gostaria%20de%20conversar.">(47) 99231-4420</a></p>
+      </div>
       <div class="actions">
-        <a class="btn primary" href="https://www.linkedin.com/in/weslley-larroza-b8bb57213">Falar no LinkedIn</a>
-        <!-- Descomente e preencha:
+        <a class="btn primary" href="https://wa.me/5547992314420?text=Ol%C3%A1%20Weslley%2C%20vi%20seu%20site%20e%20gostaria%20de%20conversar.">Chamar no WhatsApp</a>
+        <a class="btn" href="https://www.linkedin.com/in/weslley-larroza-b8bb57213">LinkedIn</a>
+        <!-- Quando tiver o e-mail do domínio, descomente:
         <a class="btn" href="mailto:contato@weslleylarroza.com.br">Mandar e-mail</a>
-        <a class="btn" href="https://wa.me/55DDDNUMERO">Chamar no WhatsApp</a>
         -->
         <a class="btn" href="cv/Weslley-Larroza-CV.pdf">Baixar CV</a>
         <a class="btn" href="https://github.com/weslley-larroza">GitHub</a>
@@ -374,8 +416,38 @@
 <footer>
   <div class="wrap">
     <span>Weslley Larroza, Itajaí, SC. 2026.</span>
-    <span><a href="https://github.com/weslley-larroza/portfolio">Código deste site</a></span>
+    <a href="https://github.com/weslley-larroza/portfolio">Código deste site</a>
   </div>
 </footer>
+
+<script>
+  const FLOWS = {"adm": {"antes": {"t": "Relatório semanal da gestão", "time": "≈ 4 horas por semana", "s": ["Exportar dados de dois sistemas diferentes", "Colar tudo numa planilha e ajustar colunas na mão", "Montar gráficos e mandar por e-mail para cada gestor"]}, "depois": {"t": "Relatório semanal da gestão", "time": "Pronto toda segunda às 8h", "s": ["Os dados são lidos direto dos sistemas", "A planilha e os gráficos são gerados sozinhos", "Cada gestor recebe o seu por e-mail ou Slack"]}}, "fin": {"antes": {"t": "Envio de documentos fiscais", "time": "Horas de conferência por dia", "s": ["Abrir cada documento no portal do governo", "Conferir status tela por tela", "Reenviar o que falhou e anotar numa planilha"]}, "depois": {"t": "Envio de documentos fiscais", "time": "A equipe só trata as exceções", "s": ["Um robô valida e transmite cada documento", "O retorno de cada protocolo é gravado no banco", "Falhas geram alerta automático com o motivo"]}}, "ops": {"antes": {"t": "Conferência de pedidos", "time": "Retrabalho todo dia", "s": ["Comparar o sistema com a planilha da equipe linha a linha", "Procurar divergências no olho", "Atualizar várias planilhas compartilhadas"]}, "depois": {"t": "Conferência de pedidos", "time": "Divergências apontadas na hora", "s": ["Sistema e planilhas cruzados automaticamente", "Diferenças destacadas antes de virar problema", "Planilhas compartilhadas sempre sincronizadas"]}}};
+  const flow = document.getElementById('flow');
+  const body = document.getElementById('flow-body');
+  let area = Object.keys(FLOWS)[0], mode = 'antes';
+  function render(){
+    const d = FLOWS[area][mode];
+    flow.dataset.mode = mode;
+    body.innerHTML = '<h3>' + d.t + '</h3><p class="time">' + d.time + '</p><ul class="steps">' + d.s.map(x => '<li>' + x + '</li>').join('') + '</ul>';
+    body.classList.remove('swap'); void body.offsetWidth; body.classList.add('swap');
+  }
+  flow.querySelectorAll('.areas button').forEach(b => b.addEventListener('click', () => {
+    area = b.dataset.area;
+    flow.querySelectorAll('.areas button').forEach(x => x.setAttribute('aria-selected', x === b));
+    render();
+  }));
+  flow.querySelectorAll('.toggle button').forEach(b => b.addEventListener('click', () => {
+    mode = b.dataset.mode;
+    flow.querySelectorAll('.toggle button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    render();
+  }));
+  render();
+
+  const list = document.getElementById('cert-list');
+  document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.filters button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    list.querySelectorAll('li').forEach(li => { li.hidden = b.dataset.f !== 'all' && li.dataset.area !== b.dataset.f; });
+  }));
+</script>
 </body>
 </html>
